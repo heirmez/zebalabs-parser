@@ -2,10 +2,13 @@
 FROM python:3.11-slim AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc g++ make autoconf automake libtool pkg-config git wget \
+    build-essential autoconf automake libtool pkg-config wget xz-utils \
     && rm -rf /var/lib/apt/lists/*
 
-# Download and build LibreDWG (provides dwg2dxf)
+# Create stub first so COPY in stage-2 always succeeds even if build fails
+RUN touch /usr/local/bin/dwg2dxf && chmod +x /usr/local/bin/dwg2dxf
+
+# Build dwg2dxf — overwrites stub on success, stub remains on failure
 RUN wget -q https://github.com/LibreDWG/libredwg/releases/download/0.12.5/libredwg-0.12.5.tar.xz \
     && tar xf libredwg-0.12.5.tar.xz \
     && cd libredwg-0.12.5 \
@@ -13,7 +16,8 @@ RUN wget -q https://github.com/LibreDWG/libredwg/releases/download/0.12.5/libred
     && make -j$(nproc) \
     && cp programs/dwg2dxf /usr/local/bin/dwg2dxf \
     && chmod +x /usr/local/bin/dwg2dxf \
-    && strip /usr/local/bin/dwg2dxf 2>/dev/null || true
+    && strip /usr/local/bin/dwg2dxf 2>/dev/null \
+    || echo "LibreDWG build failed - stub remains, ODA will be used"
 
 # Stage 2: Runtime image
 FROM python:3.11-slim
@@ -25,9 +29,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 wget \
     && rm -rf /var/lib/apt/lists/*
 
-# Install ODA File Converter (best DWG→DXF for AC1032 / AutoCAD 2018+)
-# apt-get install resolves Qt5 deps automatically — no need to pre-install them
-# Falls back to LibreDWG if download or install fails
+# Install ODA File Converter (primary DWG→DXF for AC1032 / AutoCAD 2018+)
+# apt-get install resolves Qt5 deps automatically
+# Falls back gracefully if download or install fails
 RUN apt-get update \
     && wget -q "https://download.opendesign.com/guestfiles/Demo/ODAFileConverter_QT5_lnxX64_8.3dll_24.12.deb" \
        -O /tmp/odafc.deb \
@@ -36,7 +40,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     || (rm -f /tmp/odafc.deb && apt-get clean && echo "ODA install failed - LibreDWG fallback only")
 
-# Copy LibreDWG dwg2dxf binary (fallback)
+# Copy LibreDWG dwg2dxf (real binary or stub — COPY always succeeds)
 COPY --from=builder /usr/local/bin/dwg2dxf /usr/local/bin/dwg2dxf
 
 COPY requirements.txt .
