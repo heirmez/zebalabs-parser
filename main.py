@@ -291,10 +291,12 @@ def extract_bom(dxf_path: str) -> dict:
     - Empty/missing block definitions (skipped gracefully)
     """
     # LibreDWG DXF output often contains corrupt group codes (e.g. "DC750")
-    # Use ezdxf.recover.read() which salvages what it can from malformed DXF
+    # Use ezdxf.recover.read() which salvages what it can from malformed DXF.
+    # NOTE: ezdxf 1.4.x recover.read() requires a binary stream, not a file path.
     try:
         from ezdxf import recover
-        doc, auditor = recover.read(dxf_path)
+        with open(dxf_path, "rb") as _dxf_stream:
+            doc, auditor = recover.read(_dxf_stream)
         if auditor.has_errors:
             import logging
             logging.getLogger("ezdxf").warning(f"DXF recover: {len(auditor.errors)} fixable errors in {dxf_path}")
