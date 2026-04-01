@@ -290,7 +290,16 @@ def extract_bom(dxf_path: str) -> dict:
     - Malformed entity handling (try/except per entity)
     - Empty/missing block definitions (skipped gracefully)
     """
-    doc = ezdxf.readfile(dxf_path)
+    # LibreDWG DXF output often contains corrupt group codes (e.g. "DC750")
+    # Use ezdxf.recover.read() which salvages what it can from malformed DXF
+    try:
+        from ezdxf import recover
+        doc, auditor = recover.read(dxf_path)
+        if auditor.has_errors:
+            import logging
+            logging.getLogger("ezdxf").warning(f"DXF recover: {len(auditor.errors)} fixable errors in {dxf_path}")
+    except Exception:
+        doc = ezdxf.readfile(dxf_path)  # fallback for well-formed DXF
     msp = doc.modelspace()
     block_defs = {b.name: b for b in doc.blocks if not b.name.startswith("*")}
 
