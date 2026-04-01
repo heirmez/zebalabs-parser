@@ -43,6 +43,7 @@ CATALOG_PATH = os.environ.get(
     os.path.join(CADAPP_DIR, "catalog.csv"),
 )
 ODA_CONVERTER = os.environ.get("ODA_CONVERTER_PATH", "")
+ODA_SERVICE_URL = os.environ.get("ODA_SERVICE_URL", "").rstrip("/")
 
 # Layers to skip — these are structural/dimension layers, not rooms
 SKIP_LAYERS = {"0", "Defpoints", "Layer1", "-DIM", "FRAME", "SUPPORTS"}
@@ -98,6 +99,26 @@ def convert_dwg_to_dxf(dwg_path: str) -> str:
     """
     dwg_version = _detect_dwg_version(dwg_path)
     errors = []
+
+    # Strategy 0: Remote ODA microservice — most reliable for AC1032
+    # Set ODA_SERVICE_URL env var to enable (e.g. https://oda.example.com)
+    if ODA_SERVICE_URL:
+        try:
+            import requests as _requests
+            dxf_out = dwg_path.rsplit(".", 1)[0] + "_oda.dxf"
+            with open(dwg_path, "rb") as f:
+                resp = _requests.post(
+                    f"{ODA_SERVICE_URL}/convert",
+                    files={"file": (os.path.basename(dwg_path), f, "application/octet-stream")},
+                    timeout=120,
+                )
+            if resp.status_code == 200 and len(resp.content) > 0:
+                with open(dxf_out, "wb") as f:
+                    f.write(resp.content)
+                return dxf_out
+            errors.append(f"ODA service: HTTP {resp.status_code} — {resp.text[:200]}")
+        except Exception as e:
+            errors.append(f"ODA service: {e}")
 
     # Strategy 1: ODA File Converter — best for AC1032 (AutoCAD 2018+)
     oda_path = _find_oda_converter()
@@ -593,8 +614,9 @@ async def health():
     return {
         "status": "ok",
         "ezdxf_version": ezdxf.__version__,
-        "dwg_support": bool(oda_path) or bool(libredwg_path) or odafc_available,
+        "dwg_support": bool(ODA_SERVICE_URL) or bool(oda_path) or bool(libredwg_path) or odafc_available,
         "converters": {
+            "oda_service": ODA_SERVICE_URL or None,
             "oda": oda_path,
             "dwg2dxf": libredwg_path,
             "odafc_addon": odafc_available,
