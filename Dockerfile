@@ -2,10 +2,13 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# libredwg-utils is in Debian non-free — enable it then install
-RUN echo "deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware" \
-    > /etc/apt/sources.list.d/bookworm-non-free.list \
-    && apt-get update && apt-get install -y --no-install-recommends \
+# Enable non-free repos (libredwg-utils is in Debian non-free)
+# Handles both DEB822 format (Bookworm) and legacy sources.list
+RUN sed -i 's/^Components: main$/Components: main contrib non-free non-free-firmware/' \
+        /etc/apt/sources.list.d/debian.sources 2>/dev/null || \
+    sed -i 's/ bookworm main$/ bookworm main contrib non-free non-free-firmware/' \
+        /etc/apt/sources.list 2>/dev/null; \
+    apt-get update && apt-get install -y --no-install-recommends \
     libredwg-utils \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
