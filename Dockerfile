@@ -1,12 +1,30 @@
-FROM python:3.11-slim-bullseye
+# Stage 1: Build LibreDWG from source
+FROM python:3.11-slim AS builder
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc g++ make autoconf automake libtool pkg-config git wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Download and build LibreDWG (provides dwg2dxf)
+RUN wget -q https://github.com/LibreDWG/libredwg/releases/download/0.12.5/libredwg-0.12.5.tar.xz \
+    && tar xf libredwg-0.12.5.tar.xz \
+    && cd libredwg-0.12.5 \
+    && ./configure --disable-shared --enable-static \
+    && make -j$(nproc) \
+    && make install \
+    && strip /usr/local/bin/dwg2dxf 2>/dev/null || true
+
+# Stage 2: Runtime image
+FROM python:3.11-slim
 
 WORKDIR /app
 
-# libredwg-utils (provides dwg2dxf) is in Debian 11 Bullseye main repos
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libredwg-utils \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
+
+# Copy dwg2dxf binary from builder
+COPY --from=builder /usr/local/bin/dwg2dxf /usr/local/bin/dwg2dxf
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
