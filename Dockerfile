@@ -9,9 +9,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN wget -q https://github.com/LibreDWG/libredwg/releases/download/0.12.5/libredwg-0.12.5.tar.xz \
     && tar xf libredwg-0.12.5.tar.xz \
     && cd libredwg-0.12.5 \
-    && ./configure --disable-shared --enable-static \
+    && ./configure \
     && make -j$(nproc) \
-    && make install \
+    && cp programs/dwg2dxf /usr/local/bin/dwg2dxf \
+    && chmod +x /usr/local/bin/dwg2dxf \
     && strip /usr/local/bin/dwg2dxf 2>/dev/null || true
 
 # Stage 2: Runtime image
