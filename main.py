@@ -153,6 +153,9 @@ def convert_dwg_to_dxf(dwg_path: str) -> str:
 
     # Strategy 3: LibreDWG dwg2dxf on system PATH (compiled into Docker image)
     dwg2dxf_sys = shutil.which("dwg2dxf") or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
+    # Skip zero-byte stubs left by failed Docker build
+    if dwg2dxf_sys and os.path.getsize(dwg2dxf_sys) == 0:
+        dwg2dxf_sys = None
     if dwg2dxf_sys:
         try:
             tmp_dir = tempfile.mkdtemp(prefix="cadplan_")
@@ -172,9 +175,9 @@ def convert_dwg_to_dxf(dwg_path: str) -> str:
         f"DWG conversion failed for {dwg_version} file. All strategies exhausted.\n"
         + "\n".join(f"  - {e}" for e in errors) + "\n\n"
         "Solutions:\n"
-        "  1. Save the file as DXF in AutoCAD (File → Save As → DXF)\n"
-        "  2. Install ODA File Converter (free): https://www.opendesign.com/guestfiles/oda_file_converter\n"
-        f"  3. Ensure LibreDWG dwg2dxf.exe exists at {LIBREDWG_DWG2DXF}"
+        "  1. Set ODA_SERVICE_URL env var to the deployed ODA microservice URL\n"
+        "  2. Save the file as DXF in AutoCAD (File → Save As → DXF)\n"
+        "  3. Install ODA File Converter in this container: https://www.opendesign.com/guestfiles/oda_file_converter\n"
     )
     raise HTTPException(400, detail)
 
