@@ -151,11 +151,23 @@ def convert_dwg_to_dxf(dwg_path: str) -> str:
     except Exception as e:
         errors.append(f"odafc: {e}")
 
-    # Strategy 3: LibreDWG dwg2dxf on system PATH (compiled into Docker image)
+    # Strategy 3: LibreDWG dwg2dxf — pre-compiled binary copied into Docker image
     dwg2dxf_sys = shutil.which("dwg2dxf") or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
-    # Skip zero-byte stubs left by failed Docker build
+    # Skip zero-byte stubs
     if dwg2dxf_sys and os.path.getsize(dwg2dxf_sys) == 0:
         dwg2dxf_sys = None
+    if dwg2dxf_sys:
+        try:
+            # Runtime validation: verify binary is actually executable
+            ver = subprocess.run(
+                [dwg2dxf_sys, "--version"], capture_output=True, text=True, timeout=10,
+            )
+            if ver.returncode != 0:
+                errors.append(f"LibreDWG: binary broken (version check returned {ver.returncode})")
+                dwg2dxf_sys = None
+        except Exception as e:
+            errors.append(f"LibreDWG: binary not executable: {e}")
+            dwg2dxf_sys = None
     if dwg2dxf_sys:
         try:
             tmp_dir = tempfile.mkdtemp(prefix="cadplan_")
