@@ -571,8 +571,15 @@ async def debug_xscale(file: UploadFile = File(...)):
 @app.get("/health")
 async def health():
     """Health check with converter and catalog status."""
-    libredwg_path = LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else shutil.which("dwg2dxf")
-    oda = _find_oda_converter()
+    oda_which = shutil.which("ODAFileConverter")
+    oda_find = _find_oda_converter()
+    oda_path = oda_find or oda_which or None
+
+    dwg2dxf_which = shutil.which("dwg2dxf")
+    libredwg_path = dwg2dxf_which or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
+    # Verify dwg2dxf isn't a zero-byte stub
+    if libredwg_path and os.path.isfile(libredwg_path) and os.path.getsize(libredwg_path) == 0:
+        libredwg_path = None
 
     odafc_available = False
     try:
@@ -586,10 +593,12 @@ async def health():
     return {
         "status": "ok",
         "ezdxf_version": ezdxf.__version__,
-        "dwg_support": bool(libredwg_path) or bool(oda) or odafc_available,
-        "libredwg_path": libredwg_path,
-        "oda_converter_path": oda or None,
-        "odafc_addon": odafc_available,
+        "dwg_support": bool(oda_path) or bool(libredwg_path) or odafc_available,
+        "converters": {
+            "oda": oda_path,
+            "dwg2dxf": libredwg_path,
+            "odafc_addon": odafc_available,
+        },
         "catalog_items": len(catalog),
         "catalog_path": CATALOG_PATH if catalog else None,
     }
