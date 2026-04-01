@@ -274,7 +274,28 @@ def fix_dxf(dxf_path: str) -> str:
 MAX_BLOCK_DEPTH = 10  # Prevent infinite recursion
 
 
-def extract_bom(dxf_path: str) -> dict:
+def load_dxf(dxf_path: str):
+    """Open a DXF file tolerantly, returning an ezdxf document.
+
+    Uses ezdxf.recover.read() (binary stream) to handle LibreDWG's corrupt
+    group codes (e.g. "DC750").  Falls back to ezdxf.readfile() for
+    well-formed DXF so normal DXF uploads still work.
+    """
+    try:
+        from ezdxf import recover
+        with open(dxf_path, "rb") as _stream:
+            doc, auditor = recover.read(_stream)
+        if auditor.has_errors:
+            import logging
+            logging.getLogger("ezdxf").warning(
+                f"DXF recover: {len(auditor.errors)} fixable errors in {dxf_path}"
+            )
+        return doc
+    except Exception:
+        return ezdxf.readfile(dxf_path)
+
+
+def extract_bom(dxf_path: str):
     """Extract room → furniture → component hierarchy from DXF.
 
     This is the PROVEN logic from cadapp/extract.py with edge-case hardening:
@@ -284,24 +305,15 @@ def extract_bom(dxf_path: str) -> dict:
     4. Group components by name, collect xscale values
     5. Determine unit: all |xscale| ≈ 1.0 → "no" (count), else → "rm" (sum of |xscale|)
 
+    Returns (bom_dict, doc) so the caller can reuse the already-parsed doc.
+
     Edge cases handled:
     - Circular reference detection (visited set)
     - Depth limit (MAX_BLOCK_DEPTH = 10)
     - Malformed entity handling (try/except per entity)
     - Empty/missing block definitions (skipped gracefully)
     """
-    # LibreDWG DXF output often contains corrupt group codes (e.g. "DC750")
-    # Use ezdxf.recover.read() which salvages what it can from malformed DXF.
-    # NOTE: ezdxf 1.4.x recover.read() requires a binary stream, not a file path.
-    try:
-        from ezdxf import recover
-        with open(dxf_path, "rb") as _dxf_stream:
-            doc, auditor = recover.read(_dxf_stream)
-        if auditor.has_errors:
-            import logging
-            logging.getLogger("ezdxf").warning(f"DXF recover: {len(auditor.errors)} fixable errors in {dxf_path}")
-    except Exception:
-        doc = ezdxf.readfile(dxf_path)  # fallback for well-formed DXF
+    doc = load_dxf(dxf_path)
     msp = doc.modelspace()
     block_defs = {b.name: b for b in doc.blocks if not b.name.startswith("*")}
 
@@ -403,7 +415,7 @@ def extract_bom(dxf_path: str) -> dict:
         if benches:
             result_layers[layer_name] = {"benches": benches}
 
-    return {"layers": result_layers}
+    return {"layers": result_layers}, doc
 
 
 # ── Format Response for Frontend ─────────────────────────────────────────
@@ -538,14 +550,11 @@ async def extract_dwg(file: UploadFile = File(...)):
             cleanup_paths.append(fixed_path)
             dxf_path = fixed_path
 
-        # Extract BOM hierarchy
-        bom = extract_bom(dxf_path)
+        # Extract BOM hierarchy (also returns the already-parsed doc — don't re-read)
+        bom, doc = extract_bom(dxf_path)
 
         # Load catalog for descriptions
         catalog = load_catalog()
-
-        # Re-read doc for room labels and block definitions
-        doc = ezdxf.readfile(dxf_path)
 
         return format_response(bom, file.filename, doc, catalog)
 
@@ -582,7 +591,7 @@ async def debug_xscale(file: UploadFile = File(...)):
         if fixed_path != dxf_path:
             dxf_path = fixed_path
 
-        doc = ezdxf.readfile(dxf_path)
+        doc = load_dxf(dxf_path)
         msp = doc.modelspace()
         block_defs = {b.name: b for b in doc.blocks if not b.name.startswith("*")}
 
