@@ -432,31 +432,36 @@ def format_response(bom: dict, filename: str, doc, catalog: dict) -> dict:
     # Collect room labels from text entities
     room_labels = {}
     for entity in msp:
-        if entity.dxftype() in ("TEXT", "MTEXT"):
+        try:
+            if entity.dxftype() not in ("TEXT", "MTEXT"):
+                continue
             layer = entity.dxf.layer
-            try:
-                text = entity.dxf.text if hasattr(entity.dxf, "text") else ""
-                if text and len(text) > 3:
-                    room_labels[layer] = text.strip()
-            except Exception:
-                pass
+            text = entity.dxf.text if hasattr(entity.dxf, "text") else ""
+            if text and len(text) > 3:
+                room_labels[layer] = text.strip()
+        except Exception:
+            pass
 
     # Build block_definitions for frontend
     block_definitions = {}
     for block in doc.blocks:
-        if block.name.startswith("*"):
+        try:
+            if block.name.startswith("*"):
+                continue
+        except Exception:
             continue
-        nested = [
-            e.dxf.name for e in block
-            if e.dxftype() == "INSERT" and not e.dxf.name.startswith("*")
-        ]
+        nested = []
         attrib_names = []
         for e in block:
-            if e.dxftype() == "ATTDEF":
-                try:
+            try:
+                if e.dxftype() == "INSERT":
+                    name = e.dxf.name
+                    if not name.startswith("*"):
+                        nested.append(name)
+                elif e.dxftype() == "ATTDEF":
                     attrib_names.append(e.dxf.tag)
-                except Exception:
-                    pass
+            except Exception:
+                continue
         block_definitions[block.name] = {
             "name": block.name,
             "entity_count": len(list(block)),
@@ -544,14 +549,21 @@ async def extract_dwg(file: UploadFile = File(...)):
             if dxf_path != tmp_path:
                 cleanup_paths.append(dxf_path)
 
-        # Fix SORTENTSTABLE corruption (LibreDWG output)
-        fixed_path = fix_dxf(dxf_path)
-        if fixed_path != dxf_path:
-            cleanup_paths.append(fixed_path)
-            dxf_path = fixed_path
+        # NOTE: fix_dxf() is intentionally NOT called here.
+        # LibreDWG output contains binary fragments with invalid UTF-8 bytes.
+        # fix_dxf() opens in text mode (errors="replace") which corrupts those
+        # bytes via Unicode replacement character re-encoding, making the DXF
+        # WORSE before ezdxf even sees it.  recover.read() handles SORTENTSTABLE
+        # and invalid group codes (e.g. "DC750") natively without pre-processing.
 
         # Extract BOM hierarchy (also returns the already-parsed doc — don't re-read)
-        bom, doc = extract_bom(dxf_path)
+        try:
+            bom, doc = extract_bom(dxf_path)
+        except Exception as exc:
+            raise HTTPException(
+                status_code=422,
+                detail=f"DXF parsing failed: {type(exc).__name__}: {exc}",
+            )
 
         # Load catalog for descriptions
         catalog = load_catalog()
