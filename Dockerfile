@@ -8,13 +8,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Create stub first so COPY in stage-2 always succeeds even if build fails
 RUN touch /usr/local/bin/dwg2dxf && chmod +x /usr/local/bin/dwg2dxf
 
-# Build dwg2dxf — CFLAGS="-w" suppresses GCC 12 warnings-as-errors (LibreDWG 0.12.5 compat)
-# --disable-bindings skips SWIG/Python/Perl language binding compilation
+# Build dwg2dxf — pass CFLAGS at configure time (baked into Makefile, overrides AM_CFLAGS)
+# -Wno-error turns off -Werror even if AM_CFLAGS sets it; -w suppresses all warnings
+# --without-perl --without-python skip binding compilation; no --disable-bindings (invalid flag)
 RUN wget -q https://github.com/LibreDWG/libredwg/releases/download/0.12.5/libredwg-0.12.5.tar.xz \
     && tar xf libredwg-0.12.5.tar.xz \
     && cd libredwg-0.12.5 \
-    && ./configure --disable-bindings \
-    && make CFLAGS="-O2 -w" -j$(nproc) \
+    && ./configure --without-perl --without-python CFLAGS="-O2 -w -Wno-error" \
+    && make CFLAGS="-O2 -w -Wno-error" AM_CFLAGS="" -j$(nproc) \
     && cp programs/dwg2dxf /usr/local/bin/dwg2dxf \
     && chmod +x /usr/local/bin/dwg2dxf \
     && strip /usr/local/bin/dwg2dxf 2>/dev/null \
