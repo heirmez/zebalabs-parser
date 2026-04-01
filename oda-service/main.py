@@ -60,7 +60,9 @@ async def convert(file: UploadFile = File(...)):
             timeout=120,
         )
 
-        dxf_files = glob.glob(os.path.join(out_dir, "*.dxf"))
+        # ODA outputs same_filename.dxf in the output dir (preserves input stem)
+        expected = os.path.join(out_dir, os.path.splitext(file.filename)[0] + ".dxf")
+        dxf_files = [expected] if os.path.isfile(expected) else glob.glob(os.path.join(out_dir, "*.dxf"))
         if not dxf_files or os.path.getsize(dxf_files[0]) == 0:
             detail = f"ODA conversion produced no output. stdout={result.stdout[:300]} stderr={result.stderr[:300]}"
             raise HTTPException(500, detail)

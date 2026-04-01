@@ -105,14 +105,15 @@ def convert_dwg_to_dxf(dwg_path: str) -> str:
     if ODA_SERVICE_URL:
         try:
             import requests as _requests
-            dxf_out = dwg_path.rsplit(".", 1)[0] + "_oda.dxf"
             with open(dwg_path, "rb") as f:
-                resp = _requests.post(
-                    f"{ODA_SERVICE_URL}/convert",
-                    files={"file": (os.path.basename(dwg_path), f, "application/octet-stream")},
-                    timeout=120,
-                )
+                dwg_bytes = f.read()
+            resp = _requests.post(
+                f"{ODA_SERVICE_URL}/convert",
+                files={"file": ("file.dwg", dwg_bytes)},
+                timeout=120,
+            )
             if resp.status_code == 200 and len(resp.content) > 0:
+                dxf_out = dwg_path.rsplit(".", 1)[0] + "_oda.dxf"
                 with open(dxf_out, "wb") as f:
                     f.write(resp.content)
                 return dxf_out
