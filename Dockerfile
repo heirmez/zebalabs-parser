@@ -2,8 +2,10 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# libredwg-utils provides dwg2dxf for DWG→DXF conversion (in Debian Bookworm main)
-RUN apt-get update && apt-get install -y --no-install-recommends \
+# libredwg-utils is in Debian non-free — enable it then install
+RUN echo "deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware" \
+    > /etc/apt/sources.list.d/bookworm-non-free.list \
+    && apt-get update && apt-get install -y --no-install-recommends \
     libredwg-utils \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
