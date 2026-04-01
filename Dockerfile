@@ -20,11 +20,23 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
+# System libs: glib for ezdxf, Qt5 for ODA File Converter
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libglib2.0-0 \
+    libglib2.0-0 wget \
+    libqt5core5a libqt5gui5 libqt5widgets5 libqt5xml5 \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy dwg2dxf binary from builder
+# Install ODA File Converter (best DWG→DXF for AC1032 / AutoCAD 2018+)
+# Falls back to LibreDWG if download fails
+RUN apt-get update \
+    && wget -q "https://download.opendesign.com/guestfiles/Demo/ODAFileConverter_QT5_lnxX64_8.3dll_24.12.deb" \
+       -O /tmp/odafc.deb \
+    && apt-get install -y /tmp/odafc.deb \
+    && rm -f /tmp/odafc.deb \
+    && rm -rf /var/lib/apt/lists/* \
+    || (rm -f /tmp/odafc.deb && echo "ODA install failed - LibreDWG fallback only")
+
+# Copy LibreDWG dwg2dxf binary (fallback)
 COPY --from=builder /usr/local/bin/dwg2dxf /usr/local/bin/dwg2dxf
 
 COPY requirements.txt .

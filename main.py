@@ -99,14 +99,45 @@ def convert_dwg_to_dxf(dwg_path: str) -> str:
     dwg_version = _detect_dwg_version(dwg_path)
     errors = []
 
-    # Strategy 1: LibreDWG dwg2dxf (bundled with cadapp)
-    if os.path.isfile(LIBREDWG_DWG2DXF):
+    # Strategy 1: ODA File Converter — best for AC1032 (AutoCAD 2018+)
+    oda_path = _find_oda_converter()
+    if oda_path:
+        try:
+            input_dir = os.path.dirname(dwg_path)
+            output_dir = tempfile.mkdtemp(prefix="oda_output_")
+            input_filename = os.path.basename(dwg_path)
+            result = subprocess.run(
+                [oda_path, input_dir, output_dir, "ACAD2018", "DXF", "0", "1", input_filename],
+                capture_output=True, text=True, timeout=120,
+            )
+            import glob
+            dxf_files = glob.glob(os.path.join(output_dir, "*.dxf"))
+            if dxf_files and os.path.getsize(dxf_files[0]) > 0:
+                return dxf_files[0]
+            errors.append(f"ODA: no output. stderr={result.stderr[:200] if result.stderr else 'none'}")
+        except Exception as e:
+            errors.append(f"ODA: {e}")
+
+    # Strategy 2: ezdxf odafc addon (uses ODA File Converter via ezdxf wrapper)
+    try:
+        from ezdxf.addons import odafc
+        dxf_path = dwg_path.rsplit(".", 1)[0] + ".dxf"
+        odafc.convert(dwg_path, dxf_path)
+        if os.path.isfile(dxf_path) and os.path.getsize(dxf_path) > 0:
+            return dxf_path
+        errors.append("odafc: conversion produced no output")
+    except Exception as e:
+        errors.append(f"odafc: {e}")
+
+    # Strategy 3: LibreDWG dwg2dxf on system PATH (compiled into Docker image)
+    dwg2dxf_sys = shutil.which("dwg2dxf") or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
+    if dwg2dxf_sys:
         try:
             tmp_dir = tempfile.mkdtemp(prefix="cadplan_")
             safe_base = re.sub(r'[^\w\-.]', '_', Path(dwg_path).stem)
             dxf_out = os.path.join(tmp_dir, f"{safe_base}.dxf")
             result = subprocess.run(
-                [LIBREDWG_DWG2DXF, "-y", "-o", dxf_out, dwg_path],
+                [dwg2dxf_sys, "-y", "-o", dxf_out, dwg_path],
                 capture_output=True, text=True, timeout=120,
             )
             if os.path.isfile(dxf_out) and os.path.getsize(dxf_out) > 0:
@@ -114,66 +145,6 @@ def convert_dwg_to_dxf(dwg_path: str) -> str:
             errors.append(f"LibreDWG: output empty. stderr={result.stderr[:200] if result.stderr else 'none'}")
         except Exception as e:
             errors.append(f"LibreDWG: {e}")
-
-    # Strategy 1b: LibreDWG with AC2000 output (older format, better compatibility)
-    if os.path.isfile(LIBREDWG_DWG2DXF) and "AC1032" in dwg_version:
-        try:
-            tmp_dir = tempfile.mkdtemp(prefix="cadplan_v2000_")
-            safe_base = re.sub(r'[^\w\-.]', '_', Path(dwg_path).stem)
-            dxf_out = os.path.join(tmp_dir, f"{safe_base}.dxf")
-            result = subprocess.run(
-                [LIBREDWG_DWG2DXF, "-y", "--as", "r2000", "-o", dxf_out, dwg_path],
-                capture_output=True, text=True, timeout=120,
-            )
-            if os.path.isfile(dxf_out) and os.path.getsize(dxf_out) > 0:
-                return dxf_out
-            errors.append(f"LibreDWG (r2000): output empty")
-        except Exception as e:
-            errors.append(f"LibreDWG (r2000): {e}")
-
-    # Strategy 2: ezdxf odafc addon
-    try:
-        from ezdxf.addons import odafc
-        dxf_path = dwg_path.rsplit(".", 1)[0] + ".dxf"
-        odafc.convert(dwg_path, dxf_path)
-        if os.path.isfile(dxf_path):
-            return dxf_path
-        errors.append("odafc: conversion produced no output")
-    except Exception as e:
-        errors.append(f"odafc: {e}")
-
-    # Strategy 3: dwg2dxf on system PATH
-    dwg2dxf_sys = shutil.which("dwg2dxf")
-    if dwg2dxf_sys:
-        try:
-            dxf_path = dwg_path.rsplit(".", 1)[0] + ".dxf"
-            subprocess.run(
-                [dwg2dxf_sys, "-o", dxf_path, dwg_path],
-                capture_output=True, text=True, timeout=120,
-            )
-            if os.path.isfile(dxf_path) and os.path.getsize(dxf_path) > 0:
-                return dxf_path
-            errors.append("System dwg2dxf: output empty")
-        except Exception as e:
-            errors.append(f"System dwg2dxf: {e}")
-
-    # Strategy 4: ODA File Converter
-    oda_path = _find_oda_converter()
-    if oda_path:
-        try:
-            input_dir = os.path.dirname(dwg_path)
-            output_dir = tempfile.mkdtemp(prefix="oda_output_")
-            input_filename = os.path.basename(dwg_path)
-            subprocess.run(
-                [oda_path, input_dir, output_dir, "ACAD2018", "DXF", "0", "1", input_filename],
-                capture_output=True, text=True, timeout=120,
-            )
-            import glob
-            dxf_files = glob.glob(os.path.join(output_dir, "*.dxf"))
-            if dxf_files:
-                return dxf_files[0]
-        except Exception:
-            pass
 
     detail = (
         f"DWG conversion failed for {dwg_version} file. All strategies exhausted.\n"
