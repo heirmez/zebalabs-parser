@@ -2,7 +2,7 @@
 FROM python:3.11-slim AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential autoconf automake libtool pkg-config wget xz-utils \
+    build-essential autoconf automake libtool pkg-config wget xz-utils perl \
     && rm -rf /var/lib/apt/lists/*
 
 # Create stub first so COPY in stage-2 always succeeds even if build fails
@@ -30,11 +30,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install ODA File Converter (primary DWG→DXF for AC1032 / AutoCAD 2018+)
-# apt-get install resolves Qt5 deps automatically
-# Falls back gracefully if download or install fails
+# Try multiple known versions — ODA's download URL format: ODAFileConverter_QT5_lnxX64_8.3dll_YY.MM.deb
 RUN apt-get update \
-    && wget -q "https://download.opendesign.com/guestfiles/Demo/ODAFileConverter_QT5_lnxX64_8.3dll_24.12.deb" \
-       -O /tmp/odafc.deb \
+    && (wget -q "https://download.opendesign.com/guestfiles/Demo/ODAFileConverter_QT5_lnxX64_8.3dll_25.5.deb" -O /tmp/odafc.deb \
+        || wget -q "https://download.opendesign.com/guestfiles/Demo/ODAFileConverter_QT5_lnxX64_8.3dll_24.12.deb" -O /tmp/odafc.deb \
+        || wget -q "https://download.opendesign.com/guestfiles/Demo/ODAFileConverter_QT5_lnxX64_8.3dll_24.6.deb" -O /tmp/odafc.deb) \
     && apt-get install -y /tmp/odafc.deb \
     && rm -f /tmp/odafc.deb \
     && rm -rf /var/lib/apt/lists/* \
