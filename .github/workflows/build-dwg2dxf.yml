@@ -28,15 +28,15 @@ jobs:
           cd libredwg-0.12.5
           ./configure --without-perl --without-python --disable-shared
           make -j$(nproc)
-          cp programs/dwg2dxf ../tools/dwg2dxf
-          strip ../tools/dwg2dxf
-          echo "Built: $(file ../tools/dwg2dxf)"
-          echo "Version: $(../tools/dwg2dxf --version 2>&1 | head -2)"
+          cp programs/dwg2dxf ../bin/dwg2dxf
+          strip ../bin/dwg2dxf
+          echo "Built: $(file ../bin/dwg2dxf)"
+          echo "Version: $(../bin/dwg2dxf --version 2>&1 | head -2)"
 
       - name: Commit binary to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add tools/dwg2dxf
+          git add bin/dwg2dxf
           git commit -m "ci: update dwg2dxf binary (LibreDWG 0.12.5, ubuntu-22.04)" || echo "No changes"
           git push

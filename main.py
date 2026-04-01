@@ -23,6 +23,23 @@ from pathlib import Path
 
 app = FastAPI(title="Zebalabs DWG/DXF Parser")
 
+# ── Startup validation ────────────────────────────────────────────────────
+
+@app.on_event("startup")
+def validate_dwg2dxf():
+    """Fail fast if dwg2dxf binary is missing or broken."""
+    path = shutil.which("dwg2dxf")
+    if not path:
+        import warnings
+        warnings.warn("dwg2dxf not found on PATH — DWG upload will fail")
+        return
+    try:
+        result = subprocess.run(["dwg2dxf", "--version"], capture_output=True, check=True)
+        print(f"[startup] dwg2dxf OK: {result.stdout.decode().strip()[:80] or result.stderr.decode().strip()[:80]}")
+    except Exception as e:
+        raise RuntimeError(f"dwg2dxf binary is broken: {e}")
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Lock down in production
