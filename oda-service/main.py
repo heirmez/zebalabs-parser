@@ -80,8 +80,10 @@ async def convert(file: UploadFile = File(...)):
 
 @app.get("/health")
 async def health():
+    import shutil
     oda_ok = os.path.isfile(ODA_PATH)
     return {
         "status": "ok" if oda_ok else "degraded",
-        "oda": ODA_PATH if oda_ok else None,
+        "oda_path": ODA_PATH if oda_ok else None,
+        "oda_which": shutil.which("ODAFileConverter"),
     }

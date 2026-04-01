@@ -618,7 +618,7 @@ async def health():
         "dwg_support": bool(ODA_SERVICE_URL) or bool(oda_path) or bool(libredwg_path) or odafc_available,
         "converters": {
             "oda_service": ODA_SERVICE_URL or None,
-            "oda": oda_path,
+            "local_oda": oda_path,
             "dwg2dxf": libredwg_path,
             "odafc_addon": odafc_available,
         },
