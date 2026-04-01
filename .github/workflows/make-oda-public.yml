@@ -1,0 +1,34 @@
+name: Make ODA Package Public
+
+on:
+  workflow_dispatch:
+
+jobs:
+  make-public:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - name: Make oda-converter package public
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X PATCH \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/user/packages/container/zebalabs-parser%2Foda-converter" \
+            -d '{"visibility":"public"}')
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | head -n -1)
+          echo "HTTP: $HTTP_CODE"
+          echo "Body: $BODY"
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "Failed to make package public. Trying alternate name..."
+            RESPONSE2=$(curl -s -w "\n%{http_code}" -X PATCH \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/user/packages/container/oda-converter" \
+              -d '{"visibility":"public"}')
+            echo "HTTP2: $(echo "$RESPONSE2" | tail -1)"
+            echo "Body2: $(echo "$RESPONSE2" | head -n -1)"
+          fi
