@@ -133,13 +133,13 @@ def convert_dwg_to_dxf(dwg_path: str) -> tuple[str, str]:
                 dxf_out = dwg_path.rsplit(".", 1)[0] + "_oda.dxf"
                 with open(dxf_out, "wb") as f:
                     f.write(resp.content)
-                print(f"[convert] ODA service OK → {os.path.getsize(dxf_out)} bytes")
+                print(f"[convert] ODA service OK -> {os.path.getsize(dxf_out)} bytes")
                 return dxf_out, "oda_service"
-            print(f"[convert] ODA service failed: HTTP {resp.status_code} — {resp.text[:200]}")
+            print(f"[convert] ODA service failed: HTTP {resp.status_code} - {resp.text[:200]}")
         except Exception as e:
             print(f"[convert] ODA service error: {e}")
     else:
-        print("[convert] ODA_SERVICE_URL not set — skipping ODA service")
+        print("[convert] ODA_SERVICE_URL not set - skipping ODA service")
 
     # Fallback: LibreDWG dwg2dxf
     dwg2dxf_bin = shutil.which("dwg2dxf") or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
@@ -154,7 +154,7 @@ def convert_dwg_to_dxf(dwg_path: str) -> tuple[str, str]:
                 capture_output=True, text=True, timeout=120,
             )
             if os.path.isfile(dxf_out) and os.path.getsize(dxf_out) > 0:
-                print(f"[convert] LibreDWG OK → {os.path.getsize(dxf_out)} bytes")
+                print(f"[convert] LibreDWG OK -> {os.path.getsize(dxf_out)} bytes")
                 return dxf_out, "libredwg"
             print(f"[convert] LibreDWG produced no output: {result.stderr[:200]}")
         except Exception as e:
