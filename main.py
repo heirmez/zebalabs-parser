@@ -614,9 +614,9 @@ async def extract_dwg(file: UploadFile = File(...)):
         try:
             from material_expansion import load_tbl_item, expand_components, to_flat_list
             from procurement_logic import compute_procurement
-            tbl_item = load_tbl_item(RAW_MATERIALS_PATH)
-            if tbl_item:
-                raw_materials_agg = expand_components(result["rooms"], tbl_item)
+            by_code, by_id = load_tbl_item(RAW_MATERIALS_PATH)
+            if by_code:
+                raw_materials_agg = expand_components(result["rooms"], by_code, by_id)
                 flat = to_flat_list(raw_materials_agg)
                 procurement = compute_procurement(flat)
                 result["level2_bom"] = flat
@@ -733,9 +733,9 @@ async def health():
     # Raw materials / Level 2 BOM status
     try:
         from material_expansion import load_tbl_item
-        tbl_item = load_tbl_item(RAW_MATERIALS_PATH)
-        raw_materials_items = len(tbl_item)
-        raw_materials_path = RAW_MATERIALS_PATH if tbl_item else None
+        by_code, _ = load_tbl_item(RAW_MATERIALS_PATH)
+        raw_materials_items = len(by_code)
+        raw_materials_path = RAW_MATERIALS_PATH if by_code else None
     except Exception:
         raw_materials_items = 0
         raw_materials_path = None
