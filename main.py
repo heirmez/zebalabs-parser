@@ -229,41 +229,32 @@ def _find_oda_converter() -> str:
 # ── SORTENTSTABLE Fix ────────────────────────────────────────────────────
 
 def fix_dxf(dxf_path: str) -> str:
-    """Strip SORTENTSTABLE objects that crash ezdxf.
+    """Strip SORTENTSTABLE entity instances that crash ezdxf.
 
     LibreDWG's dwg2dxf produces DXF files containing SORTENTSTABLE objects
-    in the OBJECTS section. ezdxf cannot parse these and raises errors.
-    This function strips them out, writing a _fixed.dxf if changes were made.
+    in the OBJECTS section with invalid group-code 331 where ezdxf expects 5.
+    This function strips them out using a regex that matches entity boundaries
+    (group code 0 = entity start in DXF), writing a _fixed.dxf if changes were made.
+
+    Only entity instances (preceded by group code 0) are stripped — the CLASS
+    declaration in the CLASSES section is preserved.
     """
+    import re
     with open(dxf_path, "r", errors="replace") as f:
         content = f.read()
 
     if "SORTENTSTABLE" not in content:
         return dxf_path
 
-    lines = content.split("\n")
-    fixed = []
-    i = 0
-    removed = 0
+    # Match each SORTENTSTABLE entity: starts at group-code-0 line, ends just
+    # before the next group-code-0 line that begins a new entity (capital letter value).
+    pattern = r"(?ms)^\s*0\s*\nSORTENTSTABLE\n.*?(?=^\s*0\s*\n[A-Z])"
+    fixed, n = re.subn(pattern, "", content)
 
-    while i < len(lines):
-        if lines[i].strip() == "SORTENTSTABLE":
-            # Remove the preceding "0" group code line
-            if fixed and fixed[-1].strip() == "0":
-                fixed.pop()
-            # Skip past the entire SORTENTSTABLE object
-            i += 1
-            while i < len(lines) and lines[i].strip() != "0":
-                i += 1
-            removed += 1
-            continue
-        fixed.append(lines[i])
-        i += 1
-
-    if removed > 0:
+    if n > 0:
         fixed_path = dxf_path.replace(".dxf", "_fixed.dxf")
-        with open(fixed_path, "w") as f:
-            f.write("\n".join(fixed))
+        with open(fixed_path, "w", errors="replace") as f:
+            f.write(fixed)
         return fixed_path
 
     return dxf_path
@@ -274,25 +265,71 @@ def fix_dxf(dxf_path: str) -> str:
 MAX_BLOCK_DEPTH = 10  # Prevent infinite recursion
 
 
+def _purge_sortentstable(doc) -> int:
+    """Delete SORTENTSTABLE entities directly from doc.entitydb.
+
+    Iterating doc.objects triggers lazy parsing of SORTENTSTABLE, which is
+    what causes DXFStructureError("Invalid sort handle code N, expected 5").
+    Instead we iterate doc.entitydb — a plain {handle: entity} dict — which
+    accesses already-parsed objects only, then delete by handle before any
+    blocks/modelspace iteration can trigger the bad parse path.
+    """
+    removed = 0
+    try:
+        handles_to_remove = []
+        for handle in list(doc.entitydb.keys()):
+            try:
+                entity = doc.entitydb[handle]
+                if hasattr(entity, "dxftype") and callable(entity.dxftype):
+                    if entity.dxftype() == "SORTENTSTABLE":
+                        handles_to_remove.append(handle)
+            except Exception:
+                pass
+        for handle in handles_to_remove:
+            try:
+                del doc.entitydb[handle]
+                removed += 1
+            except Exception:
+                pass
+    except Exception:
+        pass
+    return removed
+
+
 def load_dxf(dxf_path: str):
     """Open a DXF file tolerantly, returning an ezdxf document.
 
-    Uses ezdxf.recover.read() (binary stream) to handle LibreDWG's corrupt
-    group codes (e.g. "DC750").  Falls back to ezdxf.readfile() for
+    Pre-processes with fix_dxf() to strip SORTENTSTABLE entities that have
+    invalid group-code 331 (LibreDWG output) — recover.read() itself fails on
+    these, so they must be removed from the text before loading.
+
+    Uses ezdxf.recover.read() (binary stream) to handle LibreDWG's remaining
+    corrupt group codes (e.g. "DC750").  Falls back to ezdxf.readfile() for
     well-formed DXF so normal DXF uploads still work.
     """
+    # Strip SORTENTSTABLE entities from the text before ezdxf sees them.
+    # recover.read() cannot handle the invalid group-code-331 in these objects.
+    fixed_path = fix_dxf(dxf_path)
+    cleanup_fixed = fixed_path != dxf_path  # True if a new _fixed.dxf was written
     try:
         from ezdxf import recover
-        with open(dxf_path, "rb") as _stream:
+        with open(fixed_path, "rb") as _stream:
             doc, auditor = recover.read(_stream)
         if auditor.has_errors:
             import logging
             logging.getLogger("ezdxf").warning(
-                f"DXF recover: {len(auditor.errors)} fixable errors in {dxf_path}"
+                f"DXF recover: {len(auditor.errors)} fixable errors in {fixed_path}"
             )
         return doc
     except Exception:
-        return ezdxf.readfile(dxf_path)
+        doc = ezdxf.readfile(fixed_path)
+        return doc
+    finally:
+        if cleanup_fixed:
+            try:
+                os.unlink(fixed_path)
+            except OSError:
+                pass
 
 
 def extract_bom(dxf_path: str):
@@ -548,13 +585,6 @@ async def extract_dwg(file: UploadFile = File(...)):
             dxf_path = convert_dwg_to_dxf(tmp_path)
             if dxf_path != tmp_path:
                 cleanup_paths.append(dxf_path)
-
-        # NOTE: fix_dxf() is intentionally NOT called here.
-        # LibreDWG output contains binary fragments with invalid UTF-8 bytes.
-        # fix_dxf() opens in text mode (errors="replace") which corrupts those
-        # bytes via Unicode replacement character re-encoding, making the DXF
-        # WORSE before ezdxf even sees it.  recover.read() handles SORTENTSTABLE
-        # and invalid group codes (e.g. "DC750") natively without pre-processing.
 
         # Extract BOM hierarchy (also returns the already-parsed doc — don't re-read)
         try:
