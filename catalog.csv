@@ -1,0 +1,1355 @@
+item_code,description,unit_price,volume_per_unit,weight_per_unit
+13COM100,13mm thick compact laminate worktop 1000mm wide,760.0,0.42,0
+13COM120,13mm thick compact laminate worktop 1200mm wide,760.0,0.42,0
+13COM150,13mm thick compact laminate worktop 1500mm wide,760.0,0.84,0
+13COM60,13mm thick compact laminate worktop 600mm wide,760.0,0.25,0
+13COM60BS,13mm thick compact laminate worktop 600mm wide  with back splash,760.0,0.25,0
+13COM70,13mm thick compact laminate worktop 700mm wide,760.0,0.42,0
+13COM70BS,13mm thick compact laminate worktop 700mm wide with back splash,760.0,0.42,0
+13COM75,13mm thick compact laminate worktop 750mm wide,760.0,0.42,0
+13COM75BS,13mm thick compact laminate worktop 750mm wide with back splash,760.0,0.42,0
+13COM80,13mm thick compact laminate worktop 800mm wide,760.0,0.42,0
+13COM80BS,13mm thick compact laminate worktop 800mm wide with back splash,760.0,0.42,0
+13COM90,13 mm compact laminate worktop 900 mm wide,760.0,0.42,0
+13COM90BS,13 mm compact laminate worktop 900 mm wide withbackplash,760.0,0.42,0
+16ATH120,16mm thick  athlon 1200mm wide,751.0,0.34,0
+16ATH150,16 mm thick athlon worktop 1500 mm wide,751.0,0.34,0
+16ATH60,16mm thick athlon worktop 600mm wide,751.0,0.2,0
+16ATH60BS,16mm thick athlon worktop 600mm wide with back splash,751.0,0.2,0
+16ATH75,16mm thick athlon worktop 750mm wide,751.0,0.2,0
+16ATH75BS,16mm thick athlon worktop 750mm wide with back splash,751.0,0.2,0
+16ATH90,16mm thick athlon worktop 900mm wide,750.0,0.24,0
+16ATH90BS,16mm thick athlon worktop 900mm wide with backsplash,750.0,0.24,0
+16COM100,16mm thick compact laminate worktop 1000mm wide,1437.0,0.42,0
+16COM120,16mm thick compact laminate worktop 1200 mm wide,1437.0,0.42,0
+16COM150,16mm thick compact laminate worktop 1500 mm wide,1437.0,0.84,0
+16COM60,16mm thick compact laminate worktop 600 mm wide with back splash,1437.0,0.25,0
+16COM75,16mm thick compact laminate worktop 750 mm wide with back splash,1437.0,0.42,0
+16TRE100,16mm thick trespa worktop 1000mm wide,3036.0,0.21,0
+16TRE120,16mm thick trespa worktop 1200mm wide,1362.0,0.33,0
+16TRE130,16mm thick trespa worktop 1300mm wide,1362.0,0.3,0
+16TRE150,16mm thick trespa worktop 1500mm wide,1457.0,0.33,0
+16TRE60,16 mm thick trespa worktop 600mm wide,1362.0,0.13,0
+16TRE60BS,16 mm thick trespa worktop 600mm wide with back splash,1362.0,0.2,0
+16TRE70,16mm thick trespa worktop 700mm wide,1362.0,0.15,0
+16TRE70BS,16mm thick trespa worktop 700mm wide with back splash,1362.0,0.15,0
+16TRE75,16mm thick trespa worktop 750mm wide,1362.0,0.16,0
+16TRE75BS,16 mm thick trespa worktop 750mm wide with back splash,1362.0,0.2,0
+16TRE80BS,16 mm thick trespa worktop 800mm wide with back splash,3036.0,0.19,0
+16TRE90,16 mm thick trespa worktop 900mm wide,3036.0,0.24,0
+16TRE90BS,16 mm thick trespa worktop 900mm wide with back splash,3036.0,0.24,0
+16TRECOR60,16mm thick trespa corner worktop,1362.0,0.5,0
+16TRECOR60BS,16mm thick trespa corner worktop with back splash,1362.0,0.5,0
+16TRECOR75,16mm thick trespa corner worktop,1362.0,0.5,0
+16TRECOR75BS,16mm thick trespa corner worktop with back splash,1362.0,0.5,0
+16TRECOR90,16mm thick trespa corner worktop,1362.0,0.5,0
+16TRECOR90BS,16mm thick trespa corner worktop with back splash,1362.0,0.5,0
+16TREHEX150-130,16 mm thick  trespa hexagonal worktop 1500 mm wide,1457.0,0.5,0
+16TREOCT-180,16 mm thick  trespa octagonal worktop 1800 mm wide,3036.0,0.75,0
+16TREOCT150-150,16 mm thick  trespa octagonal worktop 1500 mm wide,1457.0,0.5,0
+18GRT100,18 (±1)mm thick granite worktop 1000 mm wide with plybacking,1363.0,13.12,0
+18grt120,18mm thick granite worktop 1200mm wide with plybacking,199.0,0.05,0.0
+18GRT150,18 (±1)mm thick granite worktop 1500 mm wide and plybacking,1363.0,16.4,0
+18GRT60,18 (±1)mm thick granite worktop 600 mm wide with plybacking,1363.0,6.56,0
+18GRT60BS,18 (±1)mm thick granite worktop 600 mm wide with backsplash & plybacking,1363.0,7.64,0
+18GRT75,18 (±1)mm thick granite worktop 750mm wide with plybacking,1363.0,8.2,0
+18GRT75BS,18 (±1)mm thick granite worktop 750 mm wide with backsplash &plybacking,1363.0,9.28,0
+18GRT90,18 (±1)mm thick granite worktop 900 mm wide with plybacking,1363.0,9.84,0
+18grt90bs,18mm thick granite worktop 900mm wide with backsplash and plybacking,162.0,0.04,0.0
+18MEL100,18mm thick melamine laminated plywood worktop 1000mm wide,752.0,0.42,0
+18MEL120,18mm thick melamine laminated plywood worktop 1200mm wide,752.0,0.42,0
+18MEL150,18mm thick melamine laminated plywood worktop 1500mm wide,752.0,0.83,0
+18MEL40BS,18mm thick melamine laminated plywood  worktop 400mm wide with back splash,752.0,0.25,0
+18MEL45,18mm thick melamine laminated plywood  worktop 450mm wide,752.0,0.25,0
+18MEL45BS,18mm thick melamine laminated plywood  worktop 450mm wide  with back splash,752.0,0.25,0
+18MEL60,18mm thick melamine laminated plywood  worktop 600mm wide,752.0,0.25,0
+18MEL60BS,18mm thick melamine laminated plywood  worktop 600mm wide with back splash,752.0,0.25,0
+18MEL70,18mm thick melamine laminated plywood worktop 700mm wide,752.0,0.42,0
+18MEL70BS,18mm thick melamine laminated plywood worktop 700mm wide with back splash,752.0,0.42,0
+18MEL75,18mm thick melamine laminated plywood worktop 750mm wide,752.0,0.42,0
+18MEL75BS,18mm thick melamine laminated plywood worktop 750mm wide with back splash,752.0,0.42,0
+18MEL80,18mm thick melamine laminated plywood worktop 800mm wide,752.0,0.42,0
+18MEL80BS,18mm thick melamine laminated plywood worktop 800mm wide with back splash,752.0,0.42,0
+18MEL90,18mm thick melamine laminated plywood worktop 900mm wide,752.0,0.42,0
+18MEL90BS,18mm thick melamine laminated plywood worktop 900mm wide with back splash,752.0,0.42,0
+18MELCOR60,18mm thick melamine corner worktop,1362.0,0.5,0
+18MELCOR60BS,18mm thick melamine corner worktop with back splash,1362.0,0.5,0
+18MELCOR75,18mm thick melamine corner worktop,1362.0,0.5,0
+18MELCOR75BS,18mm thick melamine corner worktop with back splash,1362.0,0.5,0
+18MELCOR90,18mm thick melamine corner worktop,1362.0,0.5,0
+18MELCOR90BS,18mm thick melamine corner worktop with back splash,1362.0,0.5,0
+19EPX120,19 mm thick epoxy worktop 1200 mm wide(Black colour),1361.0,0.4,0
+19EPX150,19mm thick epoxy worktop 1500mm wide(Black colour),1361.0,0.5,0
+19EPX60,19mm thick epoxy worktop 600mm wide(Black colour),3066.0,0.2,0
+19EPX60BS,19mm thick epoxy worktop 600mm wide with back splash(Black colour),3066.0,0.2,0
+19EPX75,19mm thick epoxyworktop 750mm wide(Black colour),1361.0,0.25,0
+19EPX75BS,19mm thick epoxyworktop 750mm wide with back splash(Black colour),1361.0,0.25,0
+19EPX90,19mm thick epoxy worktop 900 mm wide(Black colour),3066.0,0.25,0
+19EPX90BS,19mm thick epoxy worktop 900 mm wide with back splash(Black colour),3066.0,0.25,0
+19EPXCOR60,19mm thick epoxy corner worktop(Black colour),1361.0,0.5,0
+19EPXCOR75,19mm thick epoxy corner worktop(Black colour),1361.0,0.6,0
+19EPXCOR90,19mm thick epoxy corner worktop(Black colour),3066.0,0.7,0
+19EPXOCT150-150,19 mm thick epoxy octagonal worktop 1500 mm wide(Black colour),1361.0,0.5,0
+20GRT80,20 (±1)mm thick granite worktop 800mm wide with backsplash,1363.0,8.76,0
+24MEL090SP,24mm thick melamine laminated worktop 900mm wide  special,3677.0,0.5,0
+24MEL100,24mm thick melamine laminated plywood worktop 1000 mm wide,752.0,0.5,0
+24MEL100BS,24mm thick melamine laminated plywood worktop 1000 mm wide,752.0,0.5,0
+24MEL100SP,24mm thick melamine laminated worktop 1000mm wide  special,752.0,0.5,0
+24MEL120,24 mm thick melamine laminated plywood worktop 1200 mm wide,752.0,0.5,0
+24MEL120SP,24mm thick melamine laminated worktop 1200mm wide  special,752.0,0.5,0
+24MEL150,24 mm thick melamine laminated plywood worktop with 1500 mm wide,752.0,0.9,0
+24MEL30,24mm thick melamine laminated plywood worktop 300mm wide,752.0,0.1,0
+24MEL40,24mm thick melamine laminated plywood worktop 400mm wide,752.0,0.2,0
+24MEL40BS,24mm thick melamine laminated plywood worktop 400mm wide with back splash,752.0,0.2,0
+24MEL45,24mm thick melamine laminated plywood worktop 450mm wide,752.0,0.2,0
+24MEL45BS,24mm thick melamine laminated plywood worktop 450mm wide with back splash,752.0,0.2,0
+24MEL60,24mm thick melamine laminated plywood worktop 600mm wide,752.0,0.21,0
+24MEL60BS,24mm thick melamine laminated plywood worktop 600mm wide with back splash,752.0,0.25,0
+24MEL70,24mm thick melamine laminated plywood worktop 700mm wide,752.0,0.25,0
+24MEL70BS,24mm thick melamine laminated plywood worktop 700mm wide with back splash,752.0,0.25,0
+24MEL75,24mm thick melamine laminated plywood worktop 750mm wide,752.0,0.5,0
+24MEL75BS,24mm thick melamine laminated plywood worktop 750mm wide with back splash,752.0,0.55,0
+24MEL80,24mm thick melamine laminated worktop 800mm wide,752.0,0.5,0
+24MEL80BS,24mm thick melamine laminated worktop 800mm wide with back splash,752.0,0.5,0
+24MEL90,24mm thick melamine laminated worktop 900mm wide,752.0,0.5,0
+24MEL90BS,24mm thick melamine laminated worktop 900mm wide with back splash,752.0,0.5,0
+60EP45,electrical panel 45A,0.0,0.0,0.0
+61CWDD,cold water drop down,0.0,0.0,0.0
+61CWSO,cold water standout,0.0,0.0,0.0
+61DISO,distilled water standout,0.0,0.0,0.0
+61HWDD,hot water drop down,0.0,0.0,0.0
+61MXSO,mixer standout,0.0,0.0,0.0
+62G1SO,single gas standout,0.0,0.0,0.0
+62G2SO,double gas standout,0.0,0.0,0.0
+62VC2DD,double vacuum drop down,0.0,0.0,0.0
+63E2SC,double electrical socket,0.0,0.0,0.0
+63E2SCG,double electrical socket ground,0.0,0.0,0.0
+63E2SOW,double electrical standout weatherproof,0.0,0.0,0.0
+63E2WP,double electrical wall panel,0.0,0.0,0.0
+63E4WP,quad electrical wall panel,0.0,0.0,0.0
+6PP100,6mm thick polypropylene worktop 1000mm wide with 18mm plywood backing,752.0,0.5,0
+6PP100BS,6mm thick polypropylene worktop 1000mm wide with 18mm plywood backing &back splash,752.0,0.5,0
+6PP120,6mm thick polypropylene worktop 1200mm wide with 18mm plywood backing,752.0,0.75,0
+6PP150,6mm thick polypropylene worktop 1500mm wide with 18mm plywood backing,752.0,0.75,0
+6PP60,6mm thick polypropylene top 600mm wide with 18mm plywood backing,752.0,0.25,0
+6PP60BS,6mm thick polypropylene top 600mm wide with 18mm plywood backing & back splash,752.0,0.25,0
+6PP70,6mm thick polypropylene top 700mm wide with 18mm plywood backing,752.0,0.5,0
+6PP70BS,6mm thick polypropylene top 700mm wide with 18mm plywood backing & back splash,752.0,0.5,0
+6PP75,6mm thick polypropylene top 750mm wide with 18mm plywood backing,752.0,0.5,0
+6PP75BS,6mm thick polypropylene top 750mm wide with 18mm plywood backing & back splash,752.0,0.5,0
+6PP80,6mm thick polypropylene top 800mm wide with 18mm plywood backing,752.0,0.5,0
+6PP80BS,6mm thick polypropylene top 800mm wide with 18mm plywood backing & back splash,752.0,0.5,0
+6PP90,6mm thick polypropylene top 900mm wide with 18mm plywood backing,752.0,0.5,0
+6PP90BS,6mm thick polypropylene top 900mm wide with 18mm plywood backing & back splash,752.0,0.5,0
+BBENCH 100-60,"balance bench ,Size:1000x600x900mm (H)",752.0,1.5,0
+BBENCH 100-75,"Balance bench ,Size:1000x750x900mm (H)",752.0,2.0,0
+BBENCH 120-60,"balance bench ,Size:1200x600x900mm (H)",752.0,1.5,0
+BBENCH 120-75,"balance bench ,Size:1200x750x900mm (H)",752.0,2.0,0
+BBENCH 60-60,"balance bench ,Size:600x600x900mm (H)",752.0,0.9,0
+BBENCH 75-75,"balance bench ,Size:900x750x900mm (H)",752.0,2.0,0
+BBENCH 90-60,"balance bench ,Size:900x600x900mm (H)",752.0,1.5,0
+BBENCH 90-60SP,"balance bench ,Size.900x600x900mm (H)",752.0,1.5,0
+BBENCH 90-75,"balance bench ,Size:900x750x900mm (H)",752.0,2.0,0
+BBENCH 90-90,"balance bench ,Size:900x900x900mm (H)",752.0,2.0,0
+BMFC120,bench mounted fume cupboard 1200mm wide,1457.0,0.2,0
+BMFC90,bench mounted fume cupboard 980 mm wide,1457.0,0.2,0
+C1B075FHL,"u/b cabinet with 1 drawer, 1 adj. shelf and 2 doors 750mm wide with lock",752.0,0.65,0
+C1B075PLL,"u/b cabinet with 1 drawer, 1 adj. shelf and 2 doors 750mm wide with lock",752.0,0.65,0
+C1B075PLXL,"u/b cabinet with 1 drawer, 1 adj. shelf and 2 doors 750mm wide with lock",752.0,0.65,0
+C1B075VHL,"u/b cabinet with 1 drawer, 1 adj. shelf and 2 doors 750mm wide with lock",752.0,0.65,0
+C1MB075PHL,"u/b cabinet with 1 drawer, 1 adj. shelf and 2 doors 750mm wide with lock",752.0,0.65,0
+C1MB075PHXL,"u/b cabinet with 1 drawer, 1 adj. shelf and 2 doors 750mm wide with lock",752.0,0.65,0
+CA045FH,u/b storage cabinet  with 1 adjustable shelf & 1 door 450mm wide,756.0,0.4,0
+CA045FHL,u/b storage cabinet  with 1 adjustable shelf & 1 door 450mm wide with lock,756.0,0.4,0
+CA045FL,u/b storage cabinet with 1 adjustable shelf  &1door  450mm wide,756.0,0.33,0
+CA045FLL,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide with lock,756.0,0.33,0
+CA045PH,u/b storage cabinet with 1 adjustable shelf  & 1 door 450mm wide,752.0,0.62,0
+CA045PHL,u/b storage cabinet with 1 adjustable shelf  & 1 door 450mm wide with lock,752.0,0.62,0
+CA045PHX,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide,752.0,0.55,0
+CA045PHXL,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide with lock,752.0,0.55,0
+CA045PL,u/b storage cabinet with 1 adjustable shelf   & 1 door  450mm wide,752.0,0.54,0
+CA045PLL,u/b storage cabinet with 1 adjustable shelf  & 1 door 450mm wide with lock,752.0,0.54,0
+CA045PLX,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide,752.0,0.49,0
+CA045PLXL,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide with lock,752.0,0.49,0
+CA045VH,u/b storage cabinet with 1 adjustable shelf  &1door  450mm wide,752.0,0.51,0
+CA045VHL,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide with lock,752.0,0.51,0
+CA045VHX,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide,752.0,0.46,0
+CA045VHXL,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide with lock,752.0,0.46,0
+CA045VL,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide,752.0,0.44,0
+CA045VLL,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide with lock,752.0,0.44,0
+CA045VLX,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide,752.0,0.39,0
+CA045VLXL,u/b storage cabinet with 1 adjustable shelf  &1door  450mm wide with lock,752.0,0.39,0
+CA050FH,u/b storage cabinet with 1 adjustable shelf  & 1 door 500mm wide,752.0,0.5,0
+CA050FHL,u/b storage cabinet with 1 adjustable shelf  & 1 door 500mm wide with lock,752.0,0.5,0
+CA050FL,u/b storage cabinet with 1 adjustable shelf  & 1 door  500mm wide,752.0,0.4,0
+CA050FLL,u/b storage cabinet with 1 adjustable shelf  &1door  500mm wide with lock,752.0,0.4,0
+CA050PH,u/b storage cabinet with 1 adjustable shelf  & 1 door 500mm wide,752.0,0.72,0
+CA050PHL,u/b storage cabinet with 1 adjustable shelf  &1door 500mm wide with lock,752.0,0.72,0
+CA050PHX,u/b storage cabinet with 1 adjustable shelf  & 1 door  500mm wide,752.0,0.65,0
+CA050PHXL,u/b storage cabinet with 1 adjustable shelf  &1door  500mm wide with lock,752.0,0.65,0
+CA050PL,u/b storage cabinet with 1 adjustable shelf   & 1 door  500mm wide,752.0,0.64,0
+CA050PLL,u/b storage cabinet with 1 adjustable shelf   & 1 door  500mm wide with lock,752.0,0.64,0
+CA050PLX,u/b storage cabinet with 1 adjustable shelf & 1 door 500mm wide,752.0,0.57,0
+CA050PLXL,u/b storage cabinet with 1 adjustable shelf & 1 door 500mm wide with lock,752.0,0.57,0
+CA050VH,u/b storage cabinet with 1 adjustable shelf & door 500mm wide,752.0,0.6,0
+CA050VHL,u/b storage cabinet with 1 adjustable shelf & 1 door 500mm wide with lock,752.0,0.6,0
+CA050VHX,u/b storage cabinet with 1 adjustable shelf & 1 door 500mm wide,752.0,0.55,0
+CA050VHXL,u/b storage cabinet with 1 adjustable shelf & 1door 500mm wide with lock,752.0,0.55,0
+CA050VL,u/b storage cabinet with 1 adjustable shelf  & 1 door 500mm wide,752.0,0.52,0
+CA050VLL,u/b storage cabinet with 1 adjustable shelf  & 1 door 500mm wide with lock,752.0,0.52,0
+CA050VLX,u/b storage cabinet with 1 adjustable shelf  & 1 door 500mm wide,752.0,0.47,0
+CA050VLXL,u/b storage cabinet with 1 adjustable shelf  & 1 door 500mm wide,752.0,0.47,0
+CA060FH,u/b storage cabinet with 1 adjustable shelf  & 1 door 600mm wide,752.0,0.5,0
+CA060FHL,u/b storage cabinet with 1 adjustable shelf  & 1 door 600mm wide with lock,752.0,0.5,0
+CA060FL,u/b storage cabinet with 1 adjustable shelf  & 1 door  600mm wide,752.0,0.4,0
+CA060FLL,u/b storage cabinet with 1 adjustable shelf  &1door  600mm wide with lock,752.0,0.4,0
+CA060PH,u/b storage cabinet with 1 adjustable shelf  & 1 door 600mm wide,752.0,0.72,0
+CA060PHL,u/b storage cabinet with 1 adjustable shelf  & 1door 600mm wide with lock,752.0,0.72,0
+CA060PHX,u/b storage cabinet with 1 adjustable shelf  & 1 door  600mm wide,752.0,0.65,0
+CA060PHXL,u/b storage cabinet with 1 adjustable shelf  &1door  600mm wide with lock,752.0,0.65,0
+CA060PL,u/b storage cabinet with 1 adjustable shelf   & 1 door  600mm wide,752.0,0.64,0
+CA060PLL,u/b storage cabinet with 1 adjustable shelf   & 1 door  600mm wide with lock,752.0,0.64,0
+CA060PLX,u/b storage cabinet with 1 adjustable shelf & 1 door 600mm wide,752.0,0.57,0
+CA060PLXL,u/b storage cabinet with 1 adjustable shelf & 1 door 600mm wide with lock,752.0,0.57,0
+CA060VH,u/b storage cabinet with 1 adjustable shelf & door 600mm wide,752.0,0.6,0
+CA060VHL,u/b storage cabinet with 1 adjustable shelf & 1 door 600mm wide with lock,752.0,0.6,0
+CA060VHX,u/b storage cabinet with 1 adjustable shelf & 1 door 600mm wide,752.0,0.55,0
+CA060VHXL,u/b storage cabinet with 1 adjustable shelf & 1door 600mm wide with lock,752.0,0.55,0
+CA060VL,u/b storage cabinet with 1 adjustable shelf  & 1 door 600mm wide,752.0,0.52,0
+CA060VLL,u/b storage cabinet with 1 adjustable shelf  & 1 door 600mm wide with lock,752.0,0.52,0
+CA060VLX,u/b storage cabinet with 1 adjustable shelf  & 1 door 600mm wide,752.0,0.47,0
+CA060VLXL,u/b storage cabinet with 1 adjustable shelf  & 1 door 600mm wide,752.0,0.47,0
+CA090FH,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,752.0,0.62,0
+CA090FHL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,752.0,0.62,0
+CA090FL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,756.0,0.53,0
+CA090FLL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,756.0,0.53,0
+CA090PH,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,752.0,0.93,0
+CA090PHL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,752.0,0.93,0
+CA090PHX,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,752.0,0.85,0
+CA090PHXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,752.0,0.85,0
+CA090PL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,752.0,0.83,0
+CA090PLL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,752.0,0.83,0
+CA090PLX,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,752.0,0.75,0
+CA090PLXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,752.0,0.75,0
+CA090VH,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,752.0,0.82,0
+ca090vhl,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,242.0,0.37,0.0
+CA090VHX,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,752.0,0.75,0
+CA090VHXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,752.0,0.75,0
+CA090VL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,752.0,0.72,0
+CA090VLL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,752.0,0.72,0
+CA090VLX,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide,752.0,0.65,0
+CA090VLXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 900mm wide with lock,752.0,0.65,0
+CA093VHXL,,0.0,0.0,0.0
+CA100FH,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,0.77,0
+CA100FHL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,0.77,0
+CA100FL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,0.66,0
+CA100FLL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,0.66,0
+CA100PH,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,1.14,0
+CA100PHL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,1.14,0
+CA100PHX,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,1.04,0
+CA100PHXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,1.04,0
+CA100PL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,1.02,0
+CA100PLL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,1.02,0
+CA100PLX,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,0.93,0
+CA100PLXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,0.93,0
+CA100VH,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,1.02,0
+CA100VHL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,1.02,0
+CA100VHX,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,0.93,0
+CA100VHXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,0.93,0
+CA100VL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,0.9,0
+CA100VLL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,0.9,0
+CA100VLX,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide,752.0,0.82,0
+CA100VLXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1000mm wide with lock,752.0,0.82,0
+CA120FH,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,0.77,0
+CA120FHL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,752.0,0.77,0
+CA120FL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,0.66,0
+CA120FLL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,752.0,0.66,0
+CA120PH,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,1.14,0
+CA120PHL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,752.0,1.14,0
+CA120PHX,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,1.04,0
+CA120PHXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,752.0,1.04,0
+CA120PL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,1.02,0
+CA120PLL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,752.0,1.02,0
+CA120PLX,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,0.93,0
+CA120PLXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,752.0,0.93,0
+CA120VH,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,1.02,0
+ca120vhl,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,303.0,0.49,0.0
+CA120VHX,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,0.93,0
+CA120VHXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,752.0,0.93,0
+CA120VL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,0.9,0
+CA120VLL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,752.0,0.9,0
+CA120VLX,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide,752.0,0.82,0
+CA120VLXL,u/b storage cabinet with 1 adjustable shelf & 2 doors 1200mm wide with lock,752.0,0.82,0
+CAB090FH,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide",752.0,1.25,0
+CAB090FHL,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide with lock",752.0,1.25,0
+CAB090FL,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide",752.0,1.25,0
+CAB090FLL,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide with lock",752.0,1.25,0
+CAB090PH,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide",752.0,1.25,0
+CAB090PHL,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide with lock",752.0,1.25,0
+CAB090PHX,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide",752.0,1.25,0
+CAB090PHXL,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide with lock",752.0,1.25,0
+CAB090PL,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide",752.0,1.25,0
+CAB090PLL,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide with lock",752.0,1.25,0
+CAB090PLX,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide",752.0,0.75,0
+CAB090PLXL,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 900mm wide with lock",752.0,0.75,0
+CAB090VH,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 900mm wide",752.0,1.0,0
+CAB090VHL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 900mm wide with lock",752.0,1.0,0
+CAB090VHX,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 900mm wide",752.0,1.0,0
+CAB090VHXL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 900mm wide with lock",752.0,1.0,0
+CAB090VL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 900mm wide",752.0,1.0,0
+CAB090VLL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 900mm wide with lock",752.0,1.0,0
+CAB090VLX,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 900mm wide",752.0,0.75,0
+CAB090VLXL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 900mm wide with lock",752.0,0.75,0
+CAB120FH,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 1200mm wide",752.0,1.5,0
+CAB120FHL,"u/b combined cabinet with 2 doors, 2 adjustable  shelves & 1 drawer 1200mm wide  with lock",752.0,1.5,0
+CAB120FL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide.",752.0,1.25,0
+CAB120FLL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide with lock",752.0,1.25,0
+CAB120PH,"u/b combined cabinet with 2 doors, 2 adjustable shelves and 1 drawer 1200mm wide",752.0,1.5,0
+CAB120PHL,"u/b combined cabinet with 2 doors, 2 adjustable  shelves & 1 drawer 1200mm wide with lock.",752.0,1.5,0
+CAB120PHX,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1drawer 1200mm wide.",752.0,1.25,0
+CAB120PHXL,"u/b combined cabinet with 2 doors,2 adjustable shelves & 1 drawer 1200mm wide with lock.",752.0,1.25,0
+CAB120PL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide.",752.0,1.25,0
+CAB120PLL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide with lock.",752.0,1.25,0
+CAB120PLX,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1drawer 1200mm wide.",752.0,1.25,0
+CAB120PLXL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide with lock.",752.0,1.25,0
+CAB120VH,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide",752.0,1.25,0
+CAB120VHL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide with lock",752.0,1.25,0
+CAB120VHX,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide",752.0,1.25,0
+CAB120VHXL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide with lock",752.0,1.25,0
+CAB120VL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide",752.0,1.25,0
+CAB120VLL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide with lock",752.0,1.25,0
+CAB120VLX,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide",752.0,1.0,0
+CAB120VLXL,"u/b combined cabinet with 2 doors, 2 adjustable shelves & 1 drawer 1200mm wide with lock",752.0,1.0,0
+CAD090FH,"u/b combined cabinet with 1 adjustable shelf 1 door and 4 drawers, 900mm wide",752.0,1.0,0
+CAD090FHL,"u/b combined cabinet with 1 adjustable shelf  1 door and 4 drawer, 900mm wide with lock",752.0,1.0,0
+CAD090FL,"u/b combined cabinet  with 1 adjustable shelf  1 door and  3 drawer , 900mm wide",752.0,0.9,0
+CAD090FLL,"u/b combined cabinet with, 1 adjustable shelf 1 door 3 drawer 900mm wide with lock",752.0,0.9,0
+CAD090PH,"u/b combined cabinet with 1 adjustable shelf, 1 door and 5 drawers, 900mm wide",752.0,1.0,0
+CAD090PHL,"u/b combined cabinet with 1 adjustable shelf  1 door and 5 drawer, 900mm wide with lock",752.0,1.0,0
+CAD090PHX,"u/b combined cabinet with 1 adjustable shelf  1 door and 5 drawer, 900mm wide",752.0,1.0,0
+CAD090PHXL,"u/b combined cabinet  1 adjustable shelf  1 door and with 5 drawer, 900mm wide with lock",752.0,1.0,0
+CAD090PL,"u/b combined cabinet  with 1 adjustable shelf  1 door and  4 drawer , 900mm wide",752.0,0.9,0
+CAD090PLL,"u/b combined cabinet  with, 1 adjustable shelf  1 door 4 drawer 900mm wide with lock",752.0,0.9,0
+CAD090PLX,"u/b combined cabinet, 1 adjustable shelf 1 door with 4 drawer 900mm wide",752.0,0.9,0
+CAD090PLXL,u/b combined cabinet with 1 adjustable shelf 1 door and 4 drawer 900mm wide with lock,752.0,0.9,0
+CAD090VH,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 900mm wide",752.0,1.0,0
+CAD090VHL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 900mm wide with locks",752.0,1.0,0
+CAD090VHX,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 900mm wide",752.0,1.0,0
+CAD090VHXL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 900mm wide with locks",752.0,1.0,0
+CAD090VL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 3 drawers 900mm wide",752.0,1.0,0
+CAD090VLL,"u/b combined cabinet  with 1 adjustable shelf, 1 door & 3 drawers 900mm wide with lock",752.0,1.0,0
+CAD090VLX,"u/b combined cabinet  with 1 adjustable shelf, 1 door & 3 drawers 900mm wide",752.0,0.75,0
+CAD090VLXL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 3 drawers 900mm wide with locks",752.0,0.75,0
+CAD120FH,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 1200mm wide",752.0,1.25,0
+CAD120FHL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 1200mm wide with locks",752.0,1.25,0
+CAD120FL,"u/b combined cabinet with 3 drawer , 1 adjustable shelf  and 1 door 1200mm wide",752.0,1.25,0
+CAD120FLL,"u/b combined cabinet with 3 drawers ,1 adjustable shelf  and 1 door 1200mm wide with lock",752.0,1.25,0
+CAD120PH,"u/b combined cabinet with 5 drawers, 1 adjustable shelf and 1 door 1200mm wide",752.0,1.25,0
+CAD120PHL,"u/b combined cabinet with 5 drawers, 1 adjustable shelf and 1 door 1200mm wide with lock",752.0,1.25,0
+CAD120PHX,"u/b combined cabinet with 5 drawer , 1 adjustable shelf and 1 door 1200mm wide",752.0,1.25,0
+CAD120PHXL,"u/b combined cabinet with 5 drawer , 1 adjustable shelf and 1 door 1200mm wide with lock",752.0,1.25,0
+CAD120PL,"u/b combined cabinet with 4 drawer , 1 adjustable shelf  and 1 door 1200mm wide",752.0,1.25,0
+CAD120PLL,"u/b combined cabinet with 4 drawer , 1 adjustable shelf  and 1 door 1200mm wide with lock",752.0,1.25,0
+CAD120PLX,"u/b combined cabinet with 4 drawer , 1 adjustable shelf and 1 door  1200mm wide",752.0,1.0,0
+CAD120PLXL,"u/b combined cabinet with 4 drawer , 1 adjustable shelf and 1 door  1200mm wide with lock",752.0,1.0,0
+CAD120VH,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 1200mm wide",752.0,1.0,0
+CAD120VHL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 1200mm wide with lock",752.0,1.0,0
+CAD120VHX,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 1200mm wide",752.0,1.0,0
+CAD120VHXL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 4 drawers 1200mm wide with lock",752.0,1.0,0
+CAD120VL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 3 drawers 1200mm wide",752.0,1.0,0
+CAD120VLL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 3 drawers 1200mm wide with lock",752.0,1.0,0
+CAD120VLX,"u/b combined cabinet with 1 adjustable shelf, 1 door & 3 drawers 1200mm wide",752.0,1.0,0
+CAD120VLXL,"u/b combined cabinet with 1 adjustable shelf, 1 door & 3 drawers 1200mm wide with lock",752.0,1.0,0
+CAS090PH,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide,752.0,1.25,0
+CAS090PHL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide with lock,752.0,1.25,0
+CAS090PHX,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide,752.0,1.25,0
+CAS090PHXL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide with lock,752.0,1.25,0
+CAS090PL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide,752.0,1.0,0
+CAS090PLL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide with lock,752.0,1.0,0
+CAS090PLX,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide,752.0,1.0,0
+CAS090PLXL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide with lock,752.0,1.0,0
+CAS090VH,"u/b combined cabinet with 1 adj. shelf, 2 door & sink 900mm wide",752.0,1.0,0
+CAS090VHL,"u/b combined cabinet with 1 adj. shelf, 2 door & sink 900 mm wide with lock",752.0,1.0,0
+CAS090VHX,"u/b combined cabinet with 1 adj, shelf, 2 doors & sink 900mm wide",752.0,1.0,0
+CAS090VHXL,"u/b combined cabinet with 1 adj. shelf, 2 door & sink 900mm wide with lock",752.0,1.0,0
+CAS090VL,"u/b combined cabinet with 1 adj. shelf, 2 door & sink 900mm wide",752.0,1.0,0
+CAS090VLL,"u/b combined cabinet with 1 adj shelf, 2 door & sink 900mm wide with lock",752.0,1.0,0
+CAS090VLX,"u/b combined cabinet with 1 adj shelf, 2 door & sink 900mm wide",752.0,0.75,0
+CAS090VLXL,"u/b combined cabinet with 1 adj shelf, 2 door & sink 900mm wide with lock",752.0,0.75,0
+CAS120FH,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide,752.0,1.25,0
+CAS120PH,"u/b combined cabinet with 1 adj. shelf, 2 doors & sink unit 1200 mm wide",752.0,1.25,0
+CAS120PHL,u/b combined cabinet with sink cum storage with 1 adj/shelf 1200 mm wide with lock,752.0,1.25,0
+CAS120PHX,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide,752.0,1.25,0
+CAS120PHXL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide with lock,752.0,1.25,0
+CAS120PL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide,752.0,1.25,0
+CAS120PLL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide with lock,752.0,1.25,0
+CAS120PLX,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide,752.0,1.0,0
+CAS120PLXL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide with lock,752.0,1.0,0
+CAS120VH,"u/b combined cabinet with 1 adj shelf, 2 doors & sink 1200mm wide",752.0,1.25,0
+CAS120VHL,"u/b combined cabinet with 1 adj shelf, 2 doors & sink 1200mm wide with lock",752.0,1.25,0
+CAS120VHX,"u/b combined cabinet with 1 adj shelf, 2 doors & sink 1200mm wide.",752.0,1.0,0
+CAS120VHXL,"u/b combined cabinet with 1 adj. shelf, 2 doors & sink 1200 mm wide with lock",752.0,1.0,0
+CAS120VL,"u/b combined cabinet with 1 adj shelf, 2 doors & sink 1200mm wide.",752.0,1.0,0
+CAS120VLL,"u/b combined cabinet with 1 adj shelf, 2 doors & sink 1200mm wide with lock",752.0,1.0,0
+CAS120VLX,"u/b combined cabinet with 1 adj shelf, 2 doors & sink 1200mm wide.",752.0,1.0,0
+CAS120VLXL,"u/b combined cabinet with 1 adj shelf, 2 doors & sink 1200mm wide with lock",752.0,1.0,0
+CASA136VHX,u/b sink cabinet cum storage 1360mm wide,752.0,1.14,0
+CASA146PH,u/b sink cabinet cum storage 1460mm wide,752.0,1.14,0
+CASA146PHX,u/b sink cabinet cum storage 1460mm wide,752.0,1.14,0
+CB045FH,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door  450mm wide",752.0,0.39,0
+CB045FHL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide with lock",752.0,0.39,0
+CB045FL,u/b cabinet with 1 drawer & 1 door 450mm wide,752.0,0.32,0
+CB045FLL,u/b cabinet with 1 drawer & 1 door 450mm wide with lock,752.0,0.32,0
+CB045PH,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide",752.0,0.61,0
+CB045PHL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide with lock",752.0,0.61,0
+CB045PHX,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide",752.0,0.55,0
+CB045PHXL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide with lock",752.0,0.55,0
+CB045PL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide",752.0,0.53,0
+CB045PLL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide with lock",752.0,0.53,0
+CB045PLX,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide",752.0,0.48,0
+CB045PLXL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide with lock",752.0,0.48,0
+CB045VH,"u/b cabinet with 1 drawer, 1 adjustable shelf & 1 door 450mm wide",752.0,0.51,0
+CB045VHL,"u/b cabinet with 1 drawer, 1 adjustable shelf & 1 door 450mm wide with lock",752.0,0.51,0
+CB045VHX,"u/b cabinet with 1 drawer, 1 adjustable shelf & 1 door 450mm wide",752.0,0.45,0
+CB045VHXL,"u/b cabinet with 1 drawer, 1 adjustable shelf & 1 door 450mm wide with lock",752.0,0.45,0
+CB045VL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide",752.0,0.43,0
+CB045VLL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide with lock",752.0,0.43,0
+CB045VLX,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide",752.0,0.38,0
+CB045VLXL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 450mm wide with lock",752.0,0.38,0
+CB050FH,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide",756.0,0.47,0
+CB050FHL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide with lock",756.0,0.47,0
+CB050FL,u/b cabinet with 1 drawer & 1 door 500mm wide,752.0,0.39,0
+CB050FLL,u/b cabinet with 1 drawer & 1 door 500mm wide with lock,752.0,0.39,0
+CB050PH,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide",752.0,0.72,0
+CB050PHL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide with lock",752.0,0.72,0
+CB050PHX,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide",752.0,0.64,0
+CB050PHXL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide with lock",752.0,0.64,0
+CB050PL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide",752.0,0.69,0
+CB050PLL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide with lock",752.0,0.69,0
+CB050PLX,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide",752.0,0.59,0
+CB050PLXL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide with lock",752.0,0.59,0
+CB050VH,"u/b cabinet with 1 drawer,1adj. shelf & 1 door 500mm wide",752.0,0.6,0
+CB050VHL,"u/b cabinet with 1 drawer,1adjustale shelf & 1 door 500mm wide with lock",752.0,0.6,0
+CB050VHX,"u/b cabinet with 1 drawer,1adjustale shelf & 1 door 500mm wide",752.0,0.54,0
+CB050VHXL,"u/b cabinet with 1 drawer,1adjustale shelf & 1 door 500mm wide with lock",752.0,0.54,0
+CB050VL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide",752.0,0.52,0
+CB050VLL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide with lock",752.0,0.52,0
+CB050VLX,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide",752.0,0.46,0
+CB050VLXL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 500mm wide with lock",752.0,0.46,0
+CB060FH,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide",756.0,0.47,0
+CB060FHL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide with lock",756.0,0.47,0
+CB060FL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide",752.0,0.39,0
+CB060FLL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide with lock",752.0,0.39,0
+CB060PH,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide",752.0,0.72,0
+CB060PHL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide with lock",752.0,0.72,0
+CB060PHX,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide",752.0,0.64,0
+CB060PHXL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide with lock",752.0,0.64,0
+CB060PL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide",752.0,0.69,0
+CB060PLL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide with lock",752.0,0.69,0
+CB060PLX,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide",752.0,0.59,0
+CB060PLXL,"u/b cabinet with 1 drawer,1adjustable shelf & 1 door 600mm wide with lock",752.0,0.59,0
+CB060VH,"u/b cabinet with 1 drawer,1adj. shelf & 1 door 600mm wide",752.0,0.6,0
+CB060VHL,"u/b cabinet with 1 drawer,1adjustale shelf & 1 door 600mm wide with lock",752.0,0.6,0
+CB060VHX,"u/b cabinet with 1 drawer,1adjustale shelf & 1 door 600mm wide",752.0,0.54,0
+CB060VHXL,"u/b cabinet with 1 drawer,1adjustale shelf & 1 door 600mm wide with lock",752.0,0.54,0
+CB060VL,"u/b cabinet with 1 drawer,1adjustale shelf & 1 door 600mm wide",752.0,0.52,0
+CB060VLL,"u/b cabinet with 1 drawer, 1 adj. shelf & 1 door 600mm wide with lock",752.0,0.52,0
+CB060VLX,"u/b cabinet with 1 drawer, 1 adj. shelf & 1 door 600mm wide",752.0,0.46,0
+CB060VLXL,"u/b cabinet with 1 drawer, 1 adj. shelf & 1 door 600mm wide with lock",752.0,0.46,0
+CB090FH,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.65,0
+CB090FHL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.65,0
+CB090FL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.56,0
+CB090FLL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.56,0
+CB090PH,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.94,0
+CB090PHL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.94,0
+CB090PHX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.85,0
+CB090PHXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.85,0
+CB090PL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.84,0
+CB090PLL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.84,0
+CB090PLX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.76,0
+CB090PLXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.76,0
+CB090VH,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.83,0
+CB090VHL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.83,0
+CB090VHX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.75,0
+CB090VHXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.75,0
+CB090VL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.73,0
+CB090VLL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.73,0
+CB090VLX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide",752.0,0.66,0
+CB090VLXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 900mm wide with lock",752.0,0.66,0
+CB100FH,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",752.0,0.81,0
+CB100FHL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",752.0,0.81,0
+CB100FL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",756.0,0.7,0
+CB100FLL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",756.0,0.7,0
+CB100PH,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",752.0,1.15,0
+CB100PHL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",752.0,1.15,0
+CB100PHX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",752.0,1.05,0
+CB100PHXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",752.0,1.05,0
+CB100PL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",752.0,1.04,0
+CB100PLL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",752.0,1.04,0
+CB100PLX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",752.0,0.95,0
+CB100PLXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",752.0,0.95,0
+CB100VH,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",752.0,1.02,0
+CB100VHL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",752.0,1.02,0
+CB100VHX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",752.0,0.93,0
+CB100VHXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",752.0,0.93,0
+CB100VL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",752.0,0.91,0
+CB100VLL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",752.0,0.91,0
+CB100VLX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide",752.0,0.91,0
+CB100VLXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1000mm wide with lock",752.0,0.82,0
+CB120FH,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",752.0,0.81,0
+CB120FHL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",752.0,0.81,0
+CB120FL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",756.0,0.7,0
+CB120FLL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",756.0,0.7,0
+CB120PH,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",752.0,1.15,0
+CB120PHL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",752.0,1.15,0
+CB120PHX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",752.0,1.05,0
+CB120PHXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",752.0,1.05,0
+CB120PL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",752.0,1.04,0
+CB120PLL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",752.0,1.04,0
+CB120PLX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",752.0,0.95,0
+CB120PLXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",752.0,0.95,0
+CB120VH,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",752.0,1.02,0
+CB120VHL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",752.0,1.02,0
+CB120VHX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",752.0,0.93,0
+CB120VHXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",752.0,0.93,0
+CB120VL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",752.0,0.91,0
+CB120VLL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",752.0,0.91,0
+CB120VLX,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide",752.0,0.91,0
+CB120VLXL,"u/b cabinet with 2 drawer, 1 adj. shelf and 2 doors 1200mm wide with lock",752.0,0.82,0
+CBA090FH,"u/b combined cabinet with 2 door , 2 adjustable shelf and 1 drawer 900mm wide",752.0,1.25,0
+CBA090FHL,"u/b combined cabinet with 1 drawer,2 adjustable shelves and 2 doors 900mm wide with lock",752.0,1.1,0
+CBA090FL,"u/b combined cabinet with 1 drawer,  adjustable shelf and 2 doors 900mm wide",752.0,1.25,0
+CBA090FLL,"u/b combined cabinet with 1 drawer,  adjustable shelf and 2 doors 900mm wide with lock",752.0,1.0,0
+CBA090PH,"u/b combined cabinet with 1 drawer,  2 adjustable shelf and 2 doors 900mm wide",752.0,1.25,0
+CBA090PHL,"u/b combined cabinet with 1 drawer,  adjustable shelf and 2 doors 900mm wide with lock",752.0,1.1,0
+CBA090PHX,"u/b combined cabinet with 1 drawer,  adjustable shelf and 2 doors 900mm wide",752.0,1.25,0
+CBA090PHXL,"u/b combined cabinet with 1 drawer,  adjustable shelf and 2 doors 900mm wide with lock",752.0,1.0,0
+CBA090PL,"u/b combined cabinet with 1 drawer,  adjustable shelf and 2 doors 900mm wide",752.0,1.25,0
+CBA090PLL,"u/b combined cabinet with 1 drawer,  adjustable shelf and 2 doors 900mm wide with lock",752.0,1.0,0
+CBA090PLX,"u/b combined cabinet with 1 drawer,  adjustable shelf and 2 doors 900mm wide",752.0,0.75,0
+CBA090PLXL,"u/b combined cabinet with 1 drawer,  adjustable shelf and 2 doors 900mm wide with lock",752.0,0.9,0
+CBA090VH,"u/b combined cabinet with 1 drawer, 2 adj. shelf & 2 doors 900mm wide",752.0,1.0,0
+CBA090VHL,"u/b combined cabinet with 1 drawer, 2 adj. shelf & 2 doors 900mm wide with lock",752.0,1.0,0
+CBA090VHX,"u/b combined cabinet with 1 drawer, 2 adj. shelf & 2 doors 900mm wide",752.0,1.0,0
+CBA090VHXL,"u/b combined cabinet with 1 drawer, 2 adj. shelf & 2 doors 900mm wide  with lock",752.0,1.0,0
+CBA090VL,"u/b combined cabinet with 1 drawer, 2 adj. shelf & 2 doors 900mm wide",752.0,1.0,0
+CBA090VLL,"u/b combined cabinet with 1 drawer, 2 adj. shelf & 2 doors 900mm wide with lock",752.0,1.0,0
+CBA090VLX,"u/b combined cabinet with 1 drawer, 2 adj. shelf & 2 doors 900mm wide",752.0,0.75,0
+CBA090VLXL,"u/b combined cabinet with 1 drawer, 2 adj. shelf & 2 doors 900mm wide with lock",752.0,0.75,0
+CBA120FH,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.25,0
+CBA120FHL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.25,0
+CBA120FL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.25,0
+CBA120FLL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.25,0
+CBA120PH,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.25,0
+CBA120PHL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.25,0
+CBA120PHX,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.25,0
+CBA120PHXL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.25,0
+CBA120PL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.25,0
+CBA120PLL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.25,0
+CBA120PLX,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.0,0
+CBA120PLXL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.0,0
+CBA120VH,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.25,0
+CBA120VHL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.25,0
+CBA120VHX,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.25,0
+CBA120VHXL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.25,0
+CBA120VL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.25,0
+CBA120VLL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.25,0
+CBA120VLX,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide",752.0,1.0,0
+CBA120VLXL,"u/b combined cabinet with 1 drawer, 2 doors & 2 adjustable shelf 1200mm wide with lock",752.0,1.0,0
+CBD090FH,"u/b combined cabinet with  5 drawer ,1 adjustable shelf  and 1 door 900mm wide",752.0,1.0,0
+CBD090FHL,"u/b combined cabinet with  5 drawer ,1 adjustable shelf  and 1 door 900mm wide with lock",752.0,1.0,0
+CBD090FL,"u/b combined cabinet with 4 drawer , 1 adjustable shelf and 1 door 900mm wide",752.0,0.75,0
+CBD090FLL,"u/b combined cabinet with  4 drawer ,1 adjustable shelf  and 1 door 900mm wide with lock",752.0,0.75,0
+CBD090PH,"u/b combined cabinet with  6 drawer ,1 adjustable shelf  and 1 door 900mm wide",752.0,1.0,0
+CBD090PHL,"u/b combined cabinet with  6 drawer ,1 adjustable shelf  and 1 door 900mm wide with lock",752.0,1.0,0
+CBD090PHX,"u/b combined cabinet with  6 drawer , 1 adjustable shelf and 1door 900mm wide",752.0,1.0,0
+CBD090PHXL,"u/b combined cabinet with  6 drawer ,1 adjustable shelf  and 1 door 900mm wide with lock",752.0,1.0,0
+CBD090PL,"u/b combined cabinet with 5 drawer , 1 adjustable shelf and 1 door 900mm wide",752.0,0.75,0
+CBD090PLL,"u/b combined cabinet with  5 drawer ,1 adjustable shelf  and 1 door 900mm wide with lock",752.0,0.75,0
+CBD090PLX,"u/b combined cabinet with  5 drawer ,1 adjustable shelf and 1 door 900mm wide",752.0,0.75,0
+CBD090PLXL,"u/b combined cabinet with  5 drawer ,1 adjustable shelf  and 1 door 900mm wide with lock",752.0,0.75,0
+CBD090VH,"u/b combined cabinet with  1 drawer, 1 adjustable shelf, 1 door and 4 drawers 900mm wide",752.0,1.0,0
+CBD090VHL,"u/b combined cabinet with  1 drawer, 1 adjustable shelf, 1 door and 4 drawers 900mm wide with lock",752.0,1.0,0
+CBD090VHX,"u/b combined cabinet with  1 drawer, 1 adjustable shelf, 1 door and 4 drawers 900mm wide",752.0,1.0,0
+CBD090VHXL,"u/b combined cabinet with  1 drawer, 1 adjustable shelf, 1 door and 4 drawers 900mm wide with lock",752.0,1.0,0
+CBD090VL,"u/b combined cabinet with  1 drawer, 1 adjustable shelf, 1 door and 4 drawers 900mm wide",752.0,0.75,0
+CBD090VLL,"u/b combined cabinet with  1 drawer, 1 adjustable shelf, 1 door and 4 drawers 900mm wide with lock",752.0,0.75,0
+CBD090VLX,"u/b combined cabinet with  1 drawer, 1 adjustable shelf, 1 door and 4 drawers 900mm wide",752.0,0.75,0
+CBD090VLXL,"u/b combined cabinet with  1 drawer, 1 adjustable shelf, 1 door and 4 drawers 900mm wide with lock",752.0,0.75,0
+CBD120FH,"u/b combined cabinet with  6 drawer ,1 adjustable shelf and 1 door 1200mm wide",752.0,1.25,0
+CBD120FHL,"u/b combined cabinet with  6 drawer ,1 adjustable shelf and 1 door 1200mm wide with lock",752.0,1.25,0
+CBD120FL,"u/b combined cabinet with 5 drawer , 1 adjustable shelf  and 1 door1200mm wide",752.0,1.25,0
+CBD120FLL,"u/b combined cabinet with  5 drawer ,1 adjustable shelf and 1 door 1200mm wide with lock",752.0,1.25,0
+CBD120PH,"u/b combined cabinet with  6 drawer ,1 adjustable shelf and 1 door 1200mm wide",752.0,1.25,0
+CBD120PHL,"u/b combined cabinet with  6 drawer ,1 adjustable shelf and 1 door 1200mm wide with lock",752.0,1.25,0
+CBD120PHX,"u/b combined cabinet with 6 drawer , 1 adjustable shelf  and 1 door 1200mm wide",752.0,1.25,0
+CBD120PHXL,"u/b combined cabinet with  6 drawer ,1 adjustable shelf and 1 door 1200mm wide with lock",752.0,1.25,0
+CBD120PL,"u/b combined cabinet with 5 drawer , 1 adjustable shelf  and 1 door1200mm wide",752.0,1.25,0
+CBD120PLL,"u/b combined cabinet with  5 drawer ,1 adjustable shelf and 1 door 1200mm wide with lock",752.0,1.25,0
+CBD120PLX,"u/b combined cabinet with 5 drawer , 1 adjustable shelf and 1 door 1200mm wide",752.0,1.25,0
+CBD120PLXL,"u/b combined cabinet with  5 drawer ,1 adjustable shelf and 1 door 1200mm wide with lock",752.0,1.25,0
+CBD120VH,u/b combained cabinet with1 door and 5 drawers 1200mm wide,752.0,1.0,0
+CBD120VHL,u/b combained cabinet with1 door and 5 drawers 1200mm wide with lock,752.0,1.0,0
+CBD120VHX,u/b combained cabinet with 1 door and 5 drawers 1200mm wide,752.0,1.0,0
+CBD120VHXL,u/b combained cabinet with1 door and 5 drawers 1200mm wide with lock,752.0,1.0,0
+CBD120VL,"u/b combined cabinet with 4 drawer , 1 adjustable shelf and 1 door 1200mm wide",752.0,1.0,0
+CBD120VLL,u/b combained cabinet with1 door and 4 drawers 1200mm wide with lock,752.0,1.0,0
+CBD120VLX,"u/b combined cabinet with 5 drawer , 1 adjustable shelf and 1 door 1200mm wide",752.0,0.75,0
+CBD120VLXL,u/b combained cabinet with1 door and 4 drawers 1200mm wide with lock,752.0,0.75,0
+CBGRT,cable gromet,2037.0,1.0,0
+CBS090PH,"u/b combined cabinet with sink cum storage with  1 drawer , 1 adj. shelf & 2 door 900mm wide",752.0,0.9,0
+CBS090PHX,"u/b combined cabinet with sink cum storage with 1 drawer, 1 adj. shelf  & 2 door 900 wide",752.0,1.0,0
+CBS090PL,"u/b combined cabinet with sink cum storage with  1 drawer, 1 adj. shelf  & 2 door 900mm wide",752.0,1.0,0
+CBS090PLX,"u/b combined cabinet with sink cum storage with 1 drawer, 1adj. shelf & 2 door 900mm wide",752.0,0.9,0
+CBS090VH,"u/b combined cabinet with sink cum storage with  1 drawer , 1 adj. shelf & 2 door 900mm wide",752.0,0.9,0
+CBS090VHX,"u/b combined cabinet with sink cum storage with 1 drawer, 1 adj. shelf  & 2 door 900 wide",752.0,0.8,0
+CBS090VL,"u/b combined cabinet with sink cum storage with  1 drawer, 1 adj. shelf  & 2 door 900mm wide",752.0,0.8,0
+CBS120FHL,"u/b combined cabinet with sink cum storage with1 drawer, 1 adj. shelf & 2 door 1200mm wide with lock",752.0,1.2,0
+CBS120FL,"u/b combined cabinet with sink cum storage with1 drawer, 1 adj. shelf & 2 door 1200mm wide with lock",752.0,1.1,0
+CBS120PH,"u/b combined cabinet with sink cum storage with1 drawer, 1 adj. shelf & 2 door 1200mm wide",752.0,1.3,0
+CBS120PHX,"u/b combined cabinet with sink cum storage with1 drawer, 1 adj. shelf & 2 door 1200mm wide",752.0,1.2,0
+CBS120PL,"u/b combined cabinet with sink cum storage with  1 drawer, 1 adj. shelf & 2 door 1200mm wide",752.0,1.1,0
+CBS120PLX,"u/b combined cabinet with sink cum storage with 1 drawer, 1 adj. shelf & 2door 900mm wide",752.0,1.0,0
+CBS120VHX,"u/b combined cabinet with sink cum storage with1 drawer, 1 adj. shelf & 2 door 1200mm wide",752.0,1.0,0
+CBS120VL,"u/b combined cabinet with sink cum storage with  1 drawer, 1 adj. shelf & 2 door 1200mm wide",752.0,1.0,0
+CBS120VLX,"u/b combined cabinet with 2 door, 1 drawer &1 adj. shelf 1200mm wide",752.0,0.9,0
+CCH090-60,ceiling mounted canopy hood 900x600 with vsb 20,2582.0,1.0,0
+CCH120-60,ceiling mounted canopy hood 1200x600 with vsb20,2588.0,1.0,0
+CD045FH,u/b drawer cabinet 450mm wide,752.0,0.32,0
+CD045FHL,u/b drawer cabinet 450mm wide with lock,752.0,0.32,0
+CD045FL,u/b drawer cabinet 450mm wide,752.0,0.26,0
+CD045FLL,u/b drawer cabinet 450mm wide with lock,752.0,0.26,0
+CD045PH,u/b drawer cabinet 450mm wide,752.0,0.52,0
+CD045PHL,u/b drawer cabinet 450mm wide with lock,752.0,0.52,0
+CD045PHX,u/b drawer cabinet 450mm wide,752.0,0.46,0
+CD045PHXL,u/b drawer cabinet 450mm wide with lock,752.0,0.46,0
+CD045PL,u/b drawer cabinet with 450mm wide,752.0,0.45,0
+CD045PLL,u/b drawer cabinet with 450mm wide with lock,752.0,0.45,0
+CD045PLX,u/b drawer cabinet with 450mm wide,752.0,0.4,0
+CD045PLXL,u/b drawer cabinet with 450mm wide with lock,752.0,0.4,0
+CD045VH,u/b drawer cabinet 450mm wide,752.0,0.42,0
+CD045VHL,u/b drawer cabinet 450mm wide with lock,752.0,0.42,0
+CD045VHX,u/b drawer cabinet 450mm wide,752.0,0.38,0
+CD045VHXL,u/b drawer cabinet 450mm wide with lock,752.0,0.38,0
+CD045VL,u/b drawer cabinet 450mm wide,752.0,0.35,0
+CD045VLL,u/b drawer cabinet 450mm wide with lock,752.0,0.35,0
+CD045VLX,u/b drawer cabinet 450mm wide,752.0,0.32,0
+CD045VLXL,u/b drawer cabinet 450mm wide with lock,752.0,0.32,0
+CD050FH,u/b drawer cabinet 500mm wide,752.0,0.37,0
+CD050FHL,u/b drawer cabinet 500mm wide with lock,752.0,0.37,0
+CD050FL,u/b drawer cabinet 500mm wide,752.0,0.3,0
+CD050FLL,u/b drawer cabinet 500mm wide with lock,752.0,0.3,0
+CD050PH,u/b drawer cabinet 500mm wide,752.0,0.59,0
+CD050PHL,u/b drawer cabinet 500mm wide with lock,752.0,0.59,0
+CD050PHX,u/b drawer cabinet 500mm wide,752.0,0.53,0
+CD050PHXL,u/b drawer cabinet 500mm wide with lock,752.0,0.53,0
+CD050PL,u/b drawer cabinet 500mm wide,752.0,0.51,0
+CD050PLL,u/b drawer cabinet 500mm wide with lock,752.0,0.51,0
+CD050PLX,u/b drawer cabinet 500mm wide,752.0,0.46,0
+CD050PLXL,u/b drawer cabinet 500mm wide with lock,752.0,0.46,0
+CD050VH,u/b drawer cabinet 500mm wide,752.0,0.49,0
+CD050VHL,u/b drawer cabinet 500mm wide with lock,752.0,0.49,0
+CD050VHX,u/b drawer cabinet 500mm wide,752.0,0.44,0
+CD050VHXL,u/b drawer cabinet 500mm wide with lock,752.0,0.44,0
+CD050VL,u/b drawer cabinet 500mm wide,752.0,0.41,0
+CD050VLL,u/b drawer cabinet 500mm wide with lock,752.0,0.41,0
+CD050VLX,u/b drawer cabinet 500mm wide,752.0,0.37,0
+CD050VLXL,u/b drawer cabinet 500mm wide with lock,752.0,0.37,0
+CD060FH,u/b drawer cabinet 600mm wide,752.0,0.37,0
+CD060FHL,u/b drawer cabinet 600mm wide with lock,752.0,0.37,0
+CD060FL,u/b drawer cabinet 600mm wide,752.0,0.3,0
+CD060FLL,u/b drawer cabinet 600mm wide with lock,752.0,0.3,0
+CD060PH,u/b drawer cabinet 600mm wide,752.0,0.59,0
+CD060PHL,u/b drawer cabinet 600mm wide with lock,752.0,0.59,0
+CD060PHX,u/b drawer cabinet 600mm wide,752.0,0.53,0
+CD060PHXL,u/b drawer cabinet 600mm wide lock,752.0,0.53,0
+CD060PL,u/b drawer cabinet 600mm wide,752.0,0.51,0
+CD060PLL,u/b drawer cabinet with 600mm wide with lock,752.0,0.51,0
+CD060PLX,u/b drawer cabinet with 600mm wide,752.0,0.46,0
+CD060PLXL,u/b drawer cabinet with 600mm wide,752.0,0.46,0
+CD060VH,u/b drawer cabinet 600mm wide,752.0,0.49,0
+CD060VHL,u/b drawer cabinet 600mm wide with lock,752.0,0.49,0
+CD060VHX,u/b drawer cabinet 600mm wide,752.0,0.44,0
+CD060VHXL,u/b drawer cabinet 600mm wide with lock,752.0,0.44,0
+CD060VL,u/b drawer cabinet 600mm wide,752.0,0.41,0
+CD060VLL,u/b drawer cabinet 600mm wide with lock,752.0,0.41,0
+CD060VLX,u/b drawer cabinet 600mm wide,752.0,0.37,0
+CD060VLXL,u/b drawer cabinet 600mm wide with lock,752.0,0.37,0
+CD090FH,u/b drawer cabinet 900 mm wide,752.0,0.54,0
+CD090FHL,u/b drawer cabinet 900 mm wide with lock,752.0,0.54,0
+CD090FL,u/b drawer cabinet 900mm wide,752.0,0.44,0
+CD090FLL,u/b drawer cabinet 900mm wide with lock,752.0,0.44,0
+CD090PH,u/b drawer cabinet 900mm wide,752.0,0.87,0
+CD090PHL,u/b drawer cabinet 900mm wide with lock,752.0,0.87,0
+CD090PHX,u/b drawer cabinet 900mm wide,752.0,0.79,0
+CD090PHXL,u/b drawer cabinet 900mm wide with lock,752.0,0.79,0
+CD090PL,u/b drawer cabinet 900mm wide,752.0,1.0,0
+CD090PLL,u/b drawer cabinet 900mm wide with lock,752.0,1.0,0
+CD090PLX,u/b drawer cabinet 900mm wide,752.0,0.75,0
+CD090PLXL,u/b drawer cabinet 900mm wide with lock,752.0,0.75,0
+CD090VH,u/b drawer cabinet 900mm wide,752.0,0.72,0
+CD090VHL,u/b drawer cabinet 900mm wide with lock,752.0,0.72,0
+CD090VHX,u/b drawer cabinet 900mm wide,752.0,0.65,0
+CD090VHXL,u/b drawer cabinet 900mm wide with lock,752.0,0.65,0
+CD090VL,u/b drawer cabinet 900mm wide,752.0,0.61,0
+CD090VLL,u/b drawer cabinet 900mm wide with lock,752.0,0.61,0
+CD090VLX,u/b drawer cabinet 900mm wide,752.0,0.55,0
+CD090VLXL,u/b drawer cabinet 900mm wide with lock,752.0,0.55,0
+CD100FH,u/b drawer cabinet 1000mm wide,756.0,0.64,0
+CD100FHL,u/b drawer cabinet 1000mm wide with lock,756.0,0.64,0
+CD100FL,u/b drawer cabinet 1000mm wide,752.0,0.52,0
+CD100FLL,u/b drawer cabinet 1000mm wide with lock,752.0,0.52,0
+CD100PH,u/b drawer cabinet 1000mm wide,752.0,1.25,0
+CD100PHL,u/b drawer cabinet 1000mm wide with lock,752.0,1.25,0
+CD100PHX,u/b drawer cabinet 1000mm wide,752.0,1.25,0
+CD100PHXL,u/b drawer cabinet 1000mm wide with lock,752.0,1.25,0
+CD100PL,u/b drawer cabinet 1000mm wide,752.0,1.0,0
+CD100PLL,u/b drawer cabinet 1000mm wide with lock,752.0,1.0,0
+CD100PLX,u/b drawer cabinet 1000mm wide,752.0,1.0,0
+CD100PLXL,u/b drawer cabinet 1000mm wide with lock,752.0,1.0,0
+CD100VH,u/b drawer cabinet 1000mm wide,752.0,0.85,0
+CD100VHL,u/b drawer cabinet 1000mm wide with lock,752.0,0.85,0
+CD100VHX,u/b drawer cabinet 1000mm wide,752.0,0.77,0
+CD100VHXL,u/b drawer cabinet 1000mm wide with lock,752.0,0.77,0
+CD100VL,u/b drawer cabinet 1000mm wide,752.0,0.72,0
+CD100VLL,u/b drawer cabinet 1000mm wide with lock,752.0,0.72,0
+CD100VLX,u/b drawer cabinet 1000mm wide,752.0,0.66,0
+CD100VLXL,u/b drawer cabinet 1000mm wide with lock,752.0,0.66,0
+CD120FH,u/b drawer cabinet 1200mm wide,756.0,0.64,0
+CD120FHL,u/b drawer cabinet 1200mm wide with lock,756.0,0.64,0
+CD120FL,u/b drawer cabinet 1200mm wide,752.0,0.52,0
+CD120FLL,u/b drawer cabinet 1200mm wide with lock,752.0,0.52,0
+CD120PH,u/b drawer cabinet 1200mm wide,752.0,1.25,0
+CD120PHL,u/b drawer cabinet 1200mm wide with lock,752.0,1.25,0
+CD120PHX,u/b drawer cabinet 1200mm wide,752.0,1.25,0
+CD120PHXL,u/b drawer cabinet 1200mm wide with lock,752.0,1.25,0
+CD120PL,u/b drawer cabinet 1200mm wide,752.0,1.0,0
+CD120PLL,u/b drawer cabinet 1200mm wide with lock,752.0,1.0,0
+CD120PLX,u/b drawer cabinet 1200mm wide,752.0,1.0,0
+CD120PLXL,u/b drawer cabinet 1200mm wide with lock,752.0,1.0,0
+CD120VH,u/b drawer cabinet 1200mm wide,752.0,0.85,0
+CD120VHL,u/b drawer cabinet 1200mm wide with lock,752.0,0.85,0
+CD120VHX,u/b drawer cabinet 1200mm wide,752.0,0.77,0
+CD120VHXL,u/b drawer cabinet 1200mm wide with lock,752.0,0.77,0
+CD120VL,u/b drawer cabinet 1200mm wide,752.0,0.72,0
+CD120VLL,u/b drawer cabinet 1200mm wide with lock,752.0,0.72,0
+CD120VLX,u/b drawer cabinet 1200mm wide,752.0,0.66,0
+CD120VLXL,u/b drawer cabinet 1200mm wide with lock,752.0,0.66,0
+CDA090FH,"u/b combined cabinet with 5 drawer, 1 adjustable shelf and 1 door 900mm wide",752.0,1.25,0
+CDA090FHL,"u/b combined cabinet with 5 drawer, 1 adjustable shelf and 1 door 900mm wide with lock",752.0,1.25,0
+CDA090FL,"u/b combined cabinet  with 4 drawer , 1 adjustable shelf and 1 door 900mm wide",752.0,1.0,0
+CDA090FLL,"u/b combined cabinet  with 4 drawer , 1 adjustable shelf and 1 door 900mm wide with lock",752.0,1.0,0
+CDA090PH,"u/b combined cabinet with 5 drawer, 1 adjustable shelf and 1 door 900mm wide",752.0,1.25,0
+CDA090PHL,"u/b combined cabinet with 5 drawer, 1 adjustable shelf and 1 door 900mm wide with lock",752.0,1.25,0
+CDA090PHX,"u/b combined cabinet with 5 drawer, 1 adjustable shelf and 1 door 900mm wide",752.0,1.0,0
+CDA090PHXL,"u/b combined cabinet with 5 drawer, 1 adjustable shelf and 1 door 900mm wide with lock",752.0,1.0,0
+CDA090PL,"u/b combined cabinet  with 4 drawer , 1 adjustable shelf and 1 door 900mm wide",752.0,1.0,0
+CDA090PLL,"u/b combined cabinet  with 4 drawer , 1 adjustable shelf and 1 door 900mm wide with lock",752.0,1.0,0
+CDA090PLX,"u/b combined cabinet with 4 drawer, 1 adjustable shelf  and 1 door 900mm wide",752.0,1.0,0
+CDA090PLXL,"u/b combined cabinet  with 4 drawer , 1 adjustable shelf and 1 door 900mm wide with lock",752.0,1.0,0
+CDA090VH,"u/b combined cabinet with 4 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,1.0,0
+CDA090VHL,"u/b combined cabinet with 4 drawers, 1 adjustable shelf & 1 door 900mm wide with locks",752.0,1.0,0
+CDA090VHX,"u/b combined cabinet with 4 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,1.0,0
+CDA090VHXL,"u/b combined cabinet with 4 drawers, 1 adjustable shelf & 1 door 900mm wide with locks",752.0,1.0,0
+CDA090VL,"u/b combined cabinet with 3 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,1.0,0
+CDA090VLL,"u/b combined cabinet with 3 drawers, 1 adjustable shelf & 1 door 900mm wide with locks",752.0,1.0,0
+CDA090VLX,"u/b combined cabinet with 3 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,0.75,0
+CDA090VLXL,"u/b combined cabinet with 3 drawers, 1 adjustable shelf & 1 door 900mm wide with locks",752.0,0.75,0
+CDA120FH,"u/b combined cabinet with 5 drawer , 2 adjustable shelf and 1 door1200mm wide",752.0,1.25,0
+CDA120FHL,"u/b combined cabinet with 5 drawer , 2 adjustable shelf and 1 door1200mm wide with lock",752.0,1.25,0
+CDA120FL,"u/b combined cabinet with 4 drawer , 1 adjustable shelf  and 1 door 1200mm wide",752.0,1.25,0
+CDA120FLL,"u/b combined cabinet with 5 drawer , 2 adjustable shelf and 1 door1200mm wide with lock",752.0,1.25,0
+CDA120PH,"u/b combined cabinet with 5 drawer , 2 adjustable shelf and 1 door1200mm wide",752.0,1.25,0
+CDA120PHL,"u/b combined cabinet with 5 drawer , 2 adjustable shelf and 1 door1200mm wide with lock",752.0,1.25,0
+CDA120PHX,"u/b combined cabinet with 5 drawer , 1 adjustable shelf and 1 door 1200mm wide",752.0,1.25,0
+CDA120PHXL,"u/b combined cabinet with 5 drawer , 2 adjustable shelf and 1 door1200mm wide with lock",752.0,1.25,0
+CDA120PL,"u/b combined cabinet with 4 drawer , 1 adjustable shelf  and 1 door 1200mm wide",752.0,1.25,0
+CDA120PLL,"u/b combined cabinet with 5 drawer , 2 adjustable shelf and 1 door1200mm wide with lock",752.0,1.25,0
+CDA120PLX,"u/b combined cabinet with 4 drawer , 1 adjustable shelf and 1 door  1200mm wide",752.0,1.0,0
+CDA120PLXL,"u/b combined cabinet with 5 drawer , 2 adjustable shelf and 1 door1200mm wide with lock",752.0,1.0,0
+CDA120VH,"u/b combined cabinet with 4 drawers, 1 adjustable shelf & 1 door 1000mm wide",752.0,1.0,0
+CDA120VHL,"u/b combined cabinet with 4 drawers, 1 adjustable shelf & 1 door 1000mm wide with locks",752.0,1.0,0
+CDA120VHX,"u/b combined cabinet with 4 drawers, 1 adjustable shelf & 1 door 1000mm wide",752.0,1.0,0
+CDA120VHXL,"u/b combined cabinet with 4 drawers, 1 adjustable shelf & 1 door 1000mm wide with locks",752.0,1.0,0
+CDA120VL,"u/b combined cabinet with 3 drawers, 1 adjustable shelf & 1 door 1000mm wide",752.0,1.0,0
+CDA120VLL,"u/b combined cabinet with 3 drawers, 1 adjustable shelf & 1 door 1000mm wide with locks",752.0,1.0,0
+CDA120VLX,"u/b combined cabinet with 3 drawers, 1 adjustable shelf & 1 door 1000mm wide",752.0,1.0,0
+CDA120VLXL,"u/b combined cabinet with 3 drawers, 1 adjustable shelf & 1 door 1000mm wide with locks",752.0,1.0,0
+CDB090FH,"u/b combined cabinet with  5 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,1.0,0
+CDB090FHL,"u/b combined cabinet with  5 drawer, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,1.0,0
+CDB090FL,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,0.75,0
+CDB090FLL,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,0.75,0
+CDB090PH,"u/b combined cabinet with  6 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,1.0,0
+CDB090PHL,"u/b combined cabinet with  6 drawer, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,1.0,0
+CDB090PHX,"u/b combined cabinet with  5 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,1.0,0
+CDB090PHXL,"u/b combined cabinet with  5 drawers, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,1.0,0
+CDB090PL,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,0.75,0
+CDB090PLL,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,0.75,0
+CDB090PLX,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,0.75,0
+CDB090PLXL,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,0.75,0
+CDB090VH,"u/b combined cabinet with  5 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,1.0,0
+CDB090VHL,"u/b combined cabinet with  5 drawer, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,1.0,0
+CDB090VHX,"u/b combined cabinet with  5 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,1.0,0
+CDB090VHXL,"u/b combined cabinet with  5 drawers, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,1.0,0
+CDB090VL,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,0.75,0
+CDB090VLL,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,0.75,0
+CDB090VLX,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide",752.0,0.75,0
+CDB090VLXL,"u/b combined cabinet with  4 drawers, 1 adjustable shelf & 1 door 900mm wide with lock",752.0,0.75,0
+CDB120FH,"u/b combined cabinet with 5 drawers, 1 adj shelf & 1 door 1200mm wide",752.0,1.0,0
+CDB120FHL,"u/b combained cabinet with 5 drawers, 1 adj. shelf & 1 door 1200mm wide with lock",752.0,1.0,0
+CDB120FL,"u/b combined cabinet with 4 drawers , 1 adjustable shelf and 1 door 1200mm wide",752.0,1.0,0
+CDB120FLL,"u/b combained cabinet with 4 drawers, 1 adj. shelf & 1 door 1200mm wide with lock",752.0,1.0,0
+CDB120PH,"u/b combained cabinet with 5 drawers, 1 adj shelf & 1 door 1200mm wide",752.0,1.0,0
+CDB120PHL,"u/b combained cabinet with 5 drawers, 1 adj. shelf & 1 door 1200mm wide with lock",752.0,1.0,0
+CDB120PHX,"u/b combained cabinet with 5 drawers, 1 adj. shelf & 1 door 1200mm wide",752.0,1.0,0
+CDB120PHXL,"u/b combained cabinet with 5 drawers, 1 adj shelf & 1 door 1200mm wide with lock",752.0,1.0,0
+CDB120PL,"u/b combined cabinet with 5 drawers , 1 adjustable shelf and 1 door 1200mm wide",752.0,1.0,0
+CDB120PLL,"u/b combained cabinet with 5 drawers, 1 adj. shelf & 1 door 1200mm wide with lock",752.0,1.0,0
+CDB120PLX,"u/b combined cabinet with 4 drawers , 1 adjustable shelf & 1 door 1200mm wide",752.0,0.75,0
+CDB120PLXL,"u/b combained cabinet with 4drawers, 1 adj. shelf & 1 door 1200mm wide with lock",752.0,0.75,0
+CDB120VH,"u/b combained cabinet with 5 drawers, 1 adj shelf & 1 door 1200mm wide",752.0,1.0,0
+CDB120VHL,"u/b combained cabinet with 5 drawers, 1 adj. shelf & 1 door 1200mm wide with lock",752.0,1.0,0
+CDB120VHX,"u/b combained cabinet with 5 drawers, 1 adj. shelf & 1 door 1200mm wide",752.0,1.0,0
+CDB120VHXL,"u/b combained cabinet with 5 drawers, 1 adj shelf & 1 door 1200mm wide with lock",752.0,1.0,0
+CDB120VL,"u/b combined cabinet with 4 drawers , 1 adjustable shelf and 1 door 1200mm wide",752.0,1.0,0
+CDB120VLL,"u/b combained cabinet with 4 drawers, 1 adj. shelf & 1 door 1200mm wide with lock",752.0,1.0,0
+CDB120VLX,"u/b combined cabinet with 4 drawers , 1 adjustable shelf & 1 door 1200mm wide",752.0,0.75,0
+CDB120VLXL,"u/b combained cabinet with 4drawers, 1 adj. shelf & 1 door 1200mm wide with lock",752.0,0.75,0
+CDS090PH,u/b combined cabinet with 5 drawer & sink cum storage and 1door 900mm wide,752.0,0.9,0
+CDS090PHX,u/b combined cabinet with 5 drawer & sink cum storage and 1door 900mm wide,752.0,0.7,0
+CDS090PL,u/b combined cabinet with 4 drawer & sink cum storage and 1 door 900mm wide,752.0,0.8,0
+CDS090PLX,u/b combined cabinet with 4 drawer & sink cum storage and 1 door 900mm wide,752.0,0.7,0
+CDS120PH,"u/b combined cabinet with 5 drawer , sink cum storage and 1door, 1 adjustable shelf 1200mm wide",752.0,1.1,0
+CDS120PHX,"u/b combined cabinet with 5 drawer , sink cum storage and 1door, 1 adjustable shelf 1200mm wide",752.0,1.0,0
+CDS120PL,u/b combined cabinet with 4 drawer & sink cum storage with 1door &1 adjustable shelf 1200mm wide,752.0,1.0,0
+CDS120PLX,"u/b combined cabinet with 5 drawer , sink cum storage and  1door &1 adjustable shelf 1200mm wide",752.0,1.0,0
+CER SINK 45-30,ceramic sink,752.0,0.5,0
+CK045,u/b knee hole cabinet 450mm wide,752.0,0.2,0
+CK045X,u/b knee hole cabinet 450mm wide,752.0,0.2,0
+CK050,u/b knee hole cabinet 500mm wide,752.0,0.25,0
+CK050X,u/b kneehole cabinet 500mm wide,752.0,0.25,0
+CK060,u/b knee hole cabinet 600mm wide,752.0,0.25,0
+CK060X,u/b knee hole cabinet 600mm wide,752.0,0.25,0
+CK090,u/b knee hole cabinet 900mm wide,752.0,0.4,0
+CK090X,u/b knee hole cabinet 900mm wide,752.0,0.4,0
+CK100,u/b knee hole cabinet 1000mm wide,752.0,0.4,0
+CK100X,u/b knee hole cabinet 1000 wide,752.0,0.4,0
+CK120,u/b knee hole cabinet 1200mm wide,752.0,0.4,0
+CK120X,u/b knee hole cabinet 1200mm wide,752.0,0.4,0
+CKD045,u/b knee hole drawer cabinet 450mm wide,752.0,0.1,0
+CKD045L,u/b knee hole drawer cabinet 450mm wide with lock,752.0,0.15,0
+CKD045X,u/b knee hole drawer cabinet 450mm wide,752.0,0.1,0
+CKD045XL,u/b knee hole drawer cabinet 450mm wide with lock,752.0,0.1,0
+CKD050,u/b knee hole drawer cabinet 500mm wide,752.0,0.15,0
+CKD050L,u/b knee hole drawer cabinet 500mm wide with lock,752.0,0.15,0
+CKD050X,u/b knee hole drawer cabinet 500mm wide,752.0,0.15,0
+CKD050XL,u/b knee hole drawer cabinet 500mm wide with lock,752.0,0.15,0
+CKD060,u/b knee hole drawer cabinet 600mm wide,752.0,0.15,0
+CKD060L,u/b knee hole drawer cabinet 600mm wide with lock,752.0,0.15,0
+CKD060X,u/b knee hole drawer cabinet 600mm wide,752.0,0.15,0
+CKD060XL,u/b knee hole drawer cabinet 600mm wide with lock,752.0,0.15,0
+CKD090,u/b knee hole drawer cabinet 900mm wide,752.0,0.5,0
+CKD090L,u/b knee hole drawer cabinet 900mm wide with lock,752.0,0.5,0
+CKD090X,u/b knee hole drawer cabinet 900mm wide,752.0,0.25,0
+CKD090XL,u/b knee hole drawer cabinet 900mm wide with lock,752.0,0.25,0
+CKD100,u/b knee hole drawer cabinet 1000mm wide,752.0,0.25,0
+CKD100L,u/b knee hole drawer cabinet 1000mm wide with lock,752.0,0.25,0
+CKD100X,u/b knee hole drawer cabinet 1000mm wide,752.0,0.25,0
+CKD100XL,u/b knee hole drawer cabinet 1000mm wide with lock,752.0,0.25,0
+CKD110,u/b knee hole drawer cabinet 1100mm wide,752.0,0.24,0
+CKD120,u/b knee hole drawer cabinet 1200mm wide,752.0,0.25,0
+CKD120L,u/b knee hole drawer cabinet 1200mm wide with lock,752.0,0.25,0
+CKD120X,u/b knee hole drawer cabinet 1200mm wide,752.0,0.25,0
+CKD120XL,u/b knee hole drawer cabinet 1200mm wide with lock,752.0,0.25,0
+CMA045FH,u/b storage cabinet  with 1 adjustable shelf & 1 door 450mm wide,756.0,0.4,0
+CMA045FHL,u/b storage cabinet  with 1 adjustable shelf & 1 door 450mm wide with lock,756.0,0.4,0
+CMA045FL,u/b storage cabinet with 1 adjustable shelf  &1door  450mm wide,756.0,0.33,0
+CMA045FLL,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide with lock,756.0,0.33,0
+CMA045PH,u/b storage cabinet with 1 adjustable shelf  & 1 door 450mm wide,752.0,0.62,0
+CMA045PHL,u/b storage cabinet with 1 adjustable shelf  & 1 door 450mm wide with lock,752.0,0.62,0
+CMA045PHX,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide,752.0,0.55,0
+CMA045PHXL,u/b storage cabinet with 1 adjustable shelf  & 1 door  450mm wide with lock,752.0,0.55,0
+CMA060FH,u/b storage cabinet with 1 adjustable shelf  & 1 door 600mm wide,752.0,0.5,0
+CMS075PH,u/b sink cabinet 750mm wide,752.0,0.7,0
+CMSUCTARM,ceiling mounted suction arm with vsb 14(2900 rpm),2810.0,1.0,0
+CMSUCTARM-IN,ceiling mounted suction arm without blower,2810.0,1.0,0
+CO045FH,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045FHX,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045FL,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045FLX,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045PH,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045PHX,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045PL,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045PLX,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045VH,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045VHX,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045VL,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO045VLX,u/b open cabinet with 1 adjustable shelf 450 mm wide.,752.0,0.5,0
+CO050FH,u/b open cabinet with 1 adjustable shelf 500 mm wide.,752.0,0.5,0
+CO050FHX,u/b open cabinet with 1 adjustable shelf 500 mm wide.,752.0,0.5,0
+CO050FL,u/b open cabinet with 1 adjustable shelf 500 mm wide.,752.0,0.5,0
+CO050FLX,under bench open cabinet with 1 adj shelf 500mm wide.,752.0,0.5,0
+CO050PH,u/b open cabinet with 1 adjustable shelf 500 mm wide.,752.0,0.5,0
+CO050PHX,u/b open cabinet with 1 adjustable shelf 500 mm wide.,752.0,0.5,0
+CO050PL,u/b open cabinet with 1 adjustable shelf 500 mm wide.,752.0,0.5,0
+CO050PLX,under bench open cabinet with 1 adj shelf 500mm wide.,752.0,0.5,0
+CO050VH,u/b open cabinet with 1 adjustable shelf 500 mm wide.,752.0,0.5,0
+CO050VHX,u/b open cabinet with 1 adjustable shelf 500 mm wide.,752.0,0.5,0
+CO050VL,u/b open cabinet with 1 adjustable shelf 500 mm wide.,752.0,0.5,0
+CO050VLX,under bench open cabinet with 1 adj shelf 500mm wide.,752.0,0.5,0
+CO060FH,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060FHX,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060FL,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060FLX,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060PH,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060PHX,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060PL,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060PLX,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060VH,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060VHX,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060VL,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO060VLX,u/b open cabinet with 1 adjustable shelf 600 mm wide.,752.0,0.5,0
+CO090FH,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.7,0
+CO090FHX,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.5,0
+CO090FL,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.5,0
+CO090FLX,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.5,0
+CO090PH,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.7,0
+CO090PHX,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.5,0
+CO090PL,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.5,0
+CO090PLX,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.5,0
+CO090VH,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.7,0
+CO090VHX,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.5,0
+CO090VL,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.5,0
+CO090VLX,u/b open cabinet with 1 adjustable shelf 900 mm wide.,752.0,0.5,0
+CO100FH,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100FHX,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100FL,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100FLX,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100PH,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100PHX,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100PL,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100PLX,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100VH,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100VHX,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100VL,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO100VLX,u/b open cabinet with 1 adjustable shelf 1000 mm wide.,752.0,0.5,0
+CO120FH,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120FHX,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120FL,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120FLX,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120PH,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120PHX,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120PL,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120PLX,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120VH,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120VHX,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120VL,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+CO120VLX,u/b open cabinet with 1 adjustable shelf 1200 mm wide.,752.0,0.5,0
+COGRT1038PH,"U/b open cabinet with 15 nos pull out gratnell trays, 1046mm wide",762.0,2.0,0
+COGRT1046VH,"U/b open cabinet with 15 nos pull out gratnell trays, 1046mm wide",752.0,0.75,0
+COGRT70FH,"U/b open cabinet with 6 nos pull out gratnell trays, 704mm wide",752.0,0.75,0
+COGRT70PH,"U/b open cabinet with 6 nos pull out gratnell trays, 704mm wide",752.0,1.0,0
+COGRT70PHX,"U/b open cabinet with 6 nos pull out gratnell trays, 704mm wide",752.0,0.75,0
+COR S,corner support,6.0,0.0,0.3
+CPU250-H,under bench cpu holder 250mm wide,752.0,0.5,0
+CPU290,underbench cpu cabinet 290mm wide.,752.0,0.5,0
+CPU290X,under bench cpu cabinet 290mm wide,752.0,0.5,0
+CPUPLT,u/b cpu platform,752.0,0.13,0
+CR-CHAIR,Executive Chair with armrest and backrest with castors,752.0,0.5,0
+CRL-PTN,Carrel Partition,752.0,0.5,0
+CS045FH,u/b sink cabinet 450mm wide,752.0,0.4,0
+CS045FL,u/b sink cabinet 450mm wide,752.0,0.29,0
+CS045PH,u/b sink cabinet 450mm wide,752.0,0.38,0
+CS045PHX,u/b sink cabinet 450mm wide,752.0,0.35,0
+CS045PL,u/b sink cabinet 450mm wide,752.0,0.33,0
+CS045PLX,u/b sink cabinet 450mm wide,752.0,0.41,0
+CS045VH,u/b sink cabinet 450mm wide,752.0,0.44,0
+CS045VHX,u/b sink cabinet 450mm wide,752.0,0.4,0
+CS045VL,u/b sink cabinet 450mm wide,752.0,0.36,0
+CS045VLX,u/b sink cabinet 450mm wide,752.0,0.33,0
+CS060FH,u/b sink cabinet 600mm wide,752.0,0.5,0
+CS060FL,u/b sink cabinet 600mm wide,756.0,0.34,0
+CS060PH,u/b sink cabinet 600mm wide,752.0,0.6,0
+CS060PHX,u/b sink cabinet 600mm wide,752.0,0.51,0
+CS060PL,u/b sink cabinet 600mm wide,752.0,0.49,0
+CS060PLX,u/b sink cabinet 600mm wide,752.0,0.44,0
+cs060vh,u/b sink cabinet 600mm wide,127.0,0.24,0.0
+CS060VHX,u/b sink cabinet 600mm wide,752.0,0.46,0
+CS060VL,u/b sink cabinet 600mm wide,752.0,0.42,0
+CS060VLX,u/b sink cabinet 600mm wide,752.0,0.38,0
+CS0750PH,u/b sink cabinet 750mm wide,752.0,0.7,0
+CS090FH,u/b sink cabinet 900mm wide,752.0,0.6,0
+CS090FL,u/b sink cabinet 900mm wide,752.0,0.45,0
+CS090PH,u/b sink cabinet 900mm wide,752.0,0.7,0
+CS090PHX,u/b sink cabinet 900mm wide,752.0,0.63,0
+CS090PL,u/b sink cabinet 900mm wide,752.0,0.6,0
+CS090PLX,u/b sink cabinet 900mm wide,752.0,0.54,0
+CS090VH,u/b sink cabinet 900mm wide,752.0,0.64,0
+CS090VHX,u/b sink cabinet 900mm wide,752.0,0.58,0
+CS090VL,u/b sink cabinet 900mm wide,752.0,0.54,0
+CS090VLX,u/b sink cabinet 900mm wide,752.0,0.49,0
+CS100PH,u/b sink cabinet 1000mm wide,752.0,0.83,0
+CS100PHX,u/b sink cabinet 1000mm wide,752.0,0.83,0
+CS116PH,u/b sink cabinet 1160mm wide,752.0,0.83,0
+CS120FH,u/b sink cabinet 1200mm wide,752.0,0.06,0
+CS120FL,u/b sink cabinet 1200mm wide,752.0,0.55,0
+CS120PH,u/b sink cabinet 1200mm wide,752.0,0.83,0
+CS120PHX,u/b sink cabinet 1200mm wide,752.0,0.76,0
+CS120PL,u/b sink cabinet 1200mm wide,752.0,0.71,0
+CS120PLX,u/b sink cabinet 1200mm wide,752.0,0.65,0
+CS120VH,u/b sink cabinet 1200mm wide,752.0,0.77,0
+CS120VHX,u/b sink cabinet 1200mm wide,752.0,0.71,0
+CS120VL,u/b sink cabinet 1200mm wide,752.0,0.66,0
+CS120VLX,u/b sink cabinet 1200mm wide,752.0,0.6,0
+CS136VHX,u/b sink cabinet cum storage 1360mm wide,752.0,1.14,0
+CS142PH,u/b sink cabinet cum storage 1420mm wide,752.0,1.14,0
+CSA090PHL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide with lock,752.0,1.25,0
+CSA090PHX,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide,752.0,1.25,0
+CSA090PHXL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide with lock,752.0,1.25,0
+CSA090PL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide,752.0,1.0,0
+CSA090PLL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide with lock,752.0,1.0,0
+CSA090PLX,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide,752.0,1.0,0
+CSA090PLXL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 900mm wide with lock,752.0,1.0,0
+CSA090VH,"u/b combined cabinet with sink, 1 adj. shelf & 2 doors 900 mm wide",752.0,1.0,0
+CSA090VHL,"u/b combined cabinet with sink, 1 adj. shelf & 2 door 900 mm wide with lock",752.0,1.0,0
+CSA090VHX,"u/b combined cabinet with sink, 1 adj, shelf & 2 door 900 mm wide",752.0,1.0,0
+CSA090VHXL,"u/b combined cabinet with sink, 1 adj. shelf & 2 door 900 mm wide with lock",752.0,1.0,0
+CSA090VL,"u/b combined cabinet with sink, 1 adj. shelf & 2 door 900 mm wide",752.0,1.0,0
+CSA090VLL,"u/b combined cabinet with sink, 1 adj shelf & 2 door 900 mm wide with lock",752.0,1.0,0
+CSA090VLX,"u/b combined cabinet with sink, 1 adj shelf & 2 door 900 mm wide",752.0,0.75,0
+CSA090VLXL,"u/b combined cabinet with sink, 1 adj shelf & 2 door 900 mm wide with lock",752.0,0.75,0
+CSA120FH,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide,752.0,1.25,0
+CSA120PH,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide with lock,752.0,1.5,0
+CSA120PHL,u/b combined cabinet with sink cum storage with 1 adjustable shelf 1200mm wide with lock,752.0,1.5,0
+DATA,data point,0.0,0.0,0.0
+DATA2PB,double data point panel box,0.0,0.0,0.0
+DATAPB,data point panel box,0.0,0.0,0.0
+DATASO,data standout,0.0,0.0,0.0
+DPP-CUP,Polypropelyne drip cup,1380.0,1.0,0
+DRACK-PP-40x55,PP drip rack 400x550mm,0.0,0.0,0.0
+DRACK-PP-55x70,PP drip rack 550x700mm,0.0,0.0,0.0
+EPX-CUP,Epoxy drip cup,2546.0,1.0,0
+EPXSINK,epoxy sink 396x300x200mm(Black colour),1395.0,0.5,0
+EPXSINK-40x30,epoxy sink 397x300x200mm(Black colour),1395.0,0.5,0
+EPXSINK-U15C,epoxy sink 406x305x203(Black colour),1395.0,0.5,0
+EPXSINK-U24C,epoxy sink 457x356x267mm(Black colour),1395.0,0.5,0
+EPXSINK-U24CDDG,epoxy sink with double side drain grooves(457x356x267mm)(Black colour),1395.0,0.5,0
+EPXSINK-U24CDG,"epoxy sink with drain grooves,size:457x356x267mm(Black colour)",1395.0,0.5,0
+EPXSINK-U50C,solid epoxy sink .size 610x406x203(Black colour),1397.0,0.5,0
+EPXSINK40-30,epoxy sink 400x300 mm,0.0,0.0,0.0
+EXECHAIR,"executive office chair with arm rest, back rest & castors",4049.0,1.0,0
+F FFRAME,front frame,1440.0,1.0,0
+F+B FFRAME,front + back frame,1440.0,1.0,0
+f+b vframe,front+back frame,52.0,0.03,5.0
+FABOX,"first aid box, size 350x230x500(H)mm",752.0,0.5,0
+FFRM 70-60,frame work,1439.0,7.8,0
+FFRM-TRLY(70X50),trolley frame work,1362.0,0.2,0
+FFRM150-75,frame work 1500 mm,1439.0,12.0,0
+FMESEYSH,floor mounted emergency shower with eye wash,2568.0,3.0,0
+FMESEYSH-IN,floor mounted emergency shower with eye wash,2568.0,3.0,0
+FP-H,Filler panel,74.0,0.03,12.0
+FP-L,Filler panel,752.0,0.5,0
+FRAME,front+back frame,1439.0,8.5,0
+fs60hv,side frames,51.0,0.02,0.0
+FS60HVSP,side frames,1439.0,2.7,0
+FS60LV,side frames,1439.0,2.5,0
+FS60LVSP,"side frames,special",1439.0,2.5,0
+fs75hv,side frames,51.0,0.03,0.0
+FS75HVSP,"side frames,special",1439.0,2.7,0
+FS75LV,side frames,1439.0,2.4,0
+FS75LVSP,"side frames,special",1439.0,2.4,0
+FSMHF,middle frame,1441.0,0.56,0
+FSMLF,middle frame,1441.0,0.56,0
+FSS60HF,side frame,1995.0,0.6,0
+FSS60HFSP,"side frames,special",1995.0,0.6,0
+FSS60LF,side frame,1995.0,0.6,0
+FSS60LFSP,"side frames,special",1995.0,0.6,0
+FSS65LF,side frame,1995.0,0.605,0
+FSS68HF,side frame,1995.0,0.6,0
+FSS70HF,side frame,1995.0,0.75,0
+FSS75HF,side frame,1995.0,0.75,0
+FSS75HFSP,"side frames,special",1995.0,0.75,0
+FSS75LF,side frame,1441.0,0.75,0
+FSS75LFSP,"side frames,special",1441.0,0.75,0
+FSS80HF,side frame,1995.0,0.76,0
+FSS85LF,side frame,1995.0,0.805,0
+FSS90HF,side frame,1995.0,1.0,0
+FSS90HFSP,"side frames,special",1995.0,1.0,0
+FSS90LF,side frame,1995.0,1.0,0
+FSS90LFSP,"side frames,special",1995.0,1.0,0
+FSSIB60HF,island bench side frame,1995.0,0.56,0
+FSSIB60LF,island bench side frame,1995.0,0.56,0
+GRT-MLD,Worktop moulding,1363.0,13.12,0
+HEX-150,"hexagonal knee unit with support frames, size:1500x1300",752.0,3.75,0
+HEXBEN150-130,"hexagonal knee unit with support frames, size:1500x1300",752.0,3.75,0
+HEXBENCH150-130,"hexagonal knee unit with support frames, size:1500x1300",752.0,3.75,0
+KBTJ55-EBC,key board tray,740.0,8.0,0
+KS1000-H,knee space panel,755.0,0.5,0
+KS1000-L,knee space panel,755.0,0.25,0
+KS1000-MH,knee space panel,755.0,0.5,0
+KS1000-ML,knee space panel,755.0,0.5,0
+LAR2SO,double 180 deg argon standout,3061.0,1.0,0
+LAR2SO-IN,double 180 deg argon standout,3061.0,1.0,0
+LBM1EYEWSH,single bench mounted eye wash,2565.0,1.0,0
+LBMEYEWSH,lab emergency eyewash,0.0,0.0,0.0
+LBMEYEWSH-IN,bench mounted eye wash,2565.0,1.0,0
+LBS4SO,4-way lab service standout,0.0,0.0,0.0
+LCA1SC,single compressed air outlet,3055.0,1.0,0
+LCA1SO,single compressed standout,3055.0,1.0,0
+LCA2DD,2 way 180 deg compressed air drop down,2527.0,1.0,0
+LCA2DD-IN,2 way 180 deg compressed air drop down,2527.0,1.0,0
+LCA2SO,double 180 deg compressed air standout,3051.0,1.0,0
+LCA2SO-IN,double 180 deg compressed air standout,3051.0,1.0,0
+LCA4SO,quadruplete compressed air standout,3051.0,1.0,0
+LCASC,single compressed air outlet,3055.0,1.0,0
+LCASC-IN,single compressed air outlet,3055.0,1.0,0
+LCASO,single compressed air standout,2028.0,1.0,0
+LCASO-IN,single compressed air standout,2028.0,1.0,0
+LCW2OUT,double cold water outlet,0.0,0.0,0.0
+LCW2OUT-IN,single cold water standout with double outlet,688.0,1.0,0
+LCW2SO,Cold water standout with double outlet,688.0,1.0,0
+LCW2SO-IN,Cold water standout with double outlet,688.0,1.0,0
+LCW3SO,triple cold water standout,0.0,0.0,0.0
+LCW3SO-IN,cold water standout with triple outlets(goose neck),3059.0,1.0,0
+LCWSO,single cold water standout,163.0,0.01,0.85
+LCWSO-IN,single cold water standout (goose neck),2560.0,1.0,0
+LD1WP,single computer data pedestal box,1734.0,1.0,0
+LE1SC,13 Amp/220 Volt single electrical outlet,1731.0,1.0,0
+LE1SC-IN,16 Amp/220 Volt single electrical outlet,2826.0,1.0,0
+LE1SCSP,13 Amp/220 Volt single water proof electrical outlet,2642.0,1.0,0
+LE1SO,13 Amp/220 Volt single electrical standout,1731.0,1.0,0
+LE1SO-IN,16 Amp/220 Volt single electrical standout,2826.0,1.0,0
+LE1SOSP,13 Amp/220 Volt single electrical standout (weather proof),2642.0,1.0,0
+LE1WP,13Amp/220Volt single electrical pedestal box,1731.0,1.0,0
+LE1WP-IN,16 Amp/220Volt single electrical pedestal box,1731.0,1.0,0
+LE2DWP,13Amp/220Volt double 180° electric pedestal box,1731.0,2.0,0
+LE2DWP-IN,16Amp/220Volt double 180° electric pedestal box,1731.0,2.0,0
+LE2SC,13 Amp/220 Volt double electrical outlet,1730.0,1.0,0
+LE2SC-16A,16 Amp/220 Volt double electrical outlet,1730.0,1.0,0
+LE2SC-IN,16 Amp/220 Volt double electrical outlet,2826.0,2.0,0
+LE2SCSP,13 Amp/220 Volt double electrical outlet (weather proof),1732.0,1.0,0
+LE2SO,13 Amp/ 220 Volt double electrical standout,1730.0,1.0,0
+LE2SO-IN,16 Amp/220 Volt double electrical standout,2826.0,2.0,0
+LE2SOSP,13 Amp/ 220 Volt double electrical standout (weather proof),1732.0,1.0,0
+LE2SOWC,13 A / 220 Volt double electrical standout with splash proof,1730.0,1.0,0
+LE2WP,13 Amp/220 Volt double electrical pedestal box,1730.0,1.0,0
+LE2WP-IN,16 Amp/220 Volt double electrical pedestal box,0.0,0.0,0.8
+LE4SO,13 Amp/220Volt quadruplet electrical standout,1730.0,2.0,0
+LE4SO-IN,16 Amp/220Volt double quadruplet electrical standout,2826.0,4.0,0
+LE4SOSP,13 Amp/ 220 Volt quadruplet double electrical standout (weather proof),1732.0,2.0,0
+LE4WP,13 Amp/220 Volt quadruplet  electrical pedestal box,1730.0,2.0,0
+LE4WP-IN,16 Amp/220 Volt quadruplet  electrical pedestal box,1730.0,2.0,0
+LG1DD,Single gas(lpg) dropdown type,1579.0,1.0,0
+LG1DD-IN,Single gas(lpg) dropdown type,1579.0,1.0,0
+LG1SC,single gas(lpg) outlet,1579.0,1.0,0
+LG1SC-IN,single gas(lpg) outlet,1579.0,1.0,0
+LG1SO,Single gas(lpg) stand out,1579.0,1.0,0
+LG1SO-IN,Single gas(lpg) stand out,1579.0,1.0,0
+LG2DD,double gas drop down,0.0,0.0,0.0
+LG2DD-IN,double 180 deg gas(lpg) outlet drop down type,1579.0,1.0,0
+LG2SO,double 180 deg gas(lpg) standout,1579.0,1.0,0
+LG2SO-IN,double 180 deg gas(lpg) standout,1579.0,1.0,0
+LG2YSC,double 'y' type gas(lpg) outlet,1579.0,1.0,0
+LG2YSC-IN,double 'y' type gas(lpg) outlet,1579.0,1.0,0
+LG2YSO,double gas Y standout,0.0,0.0,0.0
+LG2YSO-IN,double 'y' type gas(lpg) stand out,1579.0,1.0,0
+LG4DD,Quadruplet gas(lpg) drop down type,1579.0,1.0,0
+LG4DD-IN,Quadruplet gas(lpg) drop down type,1579.0,1.0,0
+LG4SO,quad gas standout,0.0,0.0,0.0
+LG4SO-IN,4 way type gas(lpg) stand out,1579.0,1.0,0
+LG4YSO,quadruplet  type gas(lpg) stand out,1579.0,1.0,0
+LG4YSO-IN,quadruplet  type gas(lpg) stand out,1579.0,1.0,0
+LH-BOX-50,light box 500 mm wide,752.0,0.64,0
+LH1SC-IN,single hydrogen outlet,3061.0,1.0,0
+LH1SO,Single hydrogen standout,1579.0,1.0,0
+LH1SO-IN,Single hydrogen standout,1579.0,1.0,0
+LHE1SC,single helium outlet,3061.0,1.0,0
+LHE1SC-IN,single helium outlet,3061.0,1.0,0
+LHWASH,Bench mounded single eye wash,3020.0,1.0,0
+LMX1SO,single hole hot & cold water mixer standout,1376.0,2.0,0
+LMX1SO LE,single hole hot & cold water mixer standout (lever operated),1376.0,2.0,0
+LMX1SO-IN,single hole hot & cold water mixer standout,1376.0,2.0,0
+LMX1SOLV,single hole hot & cold water mixer standout lever operated,1376.0,2.0,0
+LMX2SO,double hole hot and cold water mixer standout,1418.0,2.0,0
+LMX2SO-IN,double hole hot and cold water mixer standout,1418.0,2.0,0
+LMXISO,lab mixer standout,0.0,0.0,0.0
+LMXSO-LBOW,elbow operated hot& cold water mixer standout,1376.0,1.0,0
+LN1SC,single nitrogen outlet,1580.0,1.0,0
+LN1SC-IN,single nitrogen outlet,1580.0,1.0,0
+LN1SO,single nitrogen standout,1580.0,1.0,0
+LN1SO-IN,single nitrogen standout,1580.0,1.0,0
+LN2SO,double 180 deg nitrogen standout,3061.0,1.0,0
+LN2SO-IN,double 180 deg nitrogen standout,3061.0,1.0,0
+LOCK,lock mechanism,0.0,0.0,0.0
+LVC1SC,single vaccum outlet,1580.0,1.0,0
+LVC1SO,Single vacuum standout,2561.0,2.0,0
+LVC1SO-IN,Single vacuum standout,2561.0,2.0,0
+LVC2SO,2 way 180 degree vaccum standout,2561.0,2.0,0
+LVC2SO-IN,2 way 180 degree vaccum standout,2561.0,2.0,0
+LVC2YSO,double 'y' type vaccum standout,2561.0,2.0,0
+LVC4SO,quadruplete vaccum standout,2561.0,2.0,0
+LVCSC,single vaccum outlet,1580.0,1.0,0
+LVCSC-IN,single vaccum outlet,1580.0,1.0,0
+LWSHOWER,wall mounted emergency shower,3044.0,1.0,0
+LWWASH,wall mounted eye wash,3045.0,1.0,0
+OCTKUNIT150-150,"octagonal knee unit with support frames, size:1500x1500",752.0,4.0,0
+OFFCHAIR,"executive office chair with arm rest, back rest & castors",4049.0,1.0,0
+OHC068-30,over head storage cabinet with panel door 680x300x300mm,752.0,0.5,0
+OHC100-30,open over head storage cabinet 1000x300x1200mm,752.0,0.75,0
+OHC110-30,open over head storage cabinet 1100x300x1200mm,752.0,0.75,0
+OHC120-30SP,over head storage cabinet with panel door 1200x300x300mm,752.0,1.0,0
+OHGID100-30,over head storage cabinet with glass infilt door 1000x300x1200mm,752.0,0.75,0
+OHO100-30,over head open storage cabinet  1000x300x1200mm,752.0,0.75,0
+PDLTAP,pedal operator water standout,2560.0,1.0,0
+PPSINK32,polypropylene sink 320mm,0.0,0.0,0.0
+PPSINK32-32,Polypropylene sink 320 x 320mm,1380.0,1.0,0
+PPSINK45-35,polypropylene sink 450x350 mm,71.0,0.07,2.5
+PPSINK45-35DG,polypropylene sink 450 x 350 mm with drain grooves,2510.0,1.0,0
+PPSINK56-35,polypropylene sink 560x355 mm,2510.0,1.0,0
+PPSINK60-45,polypropylene sink 600x450 mm,2510.0,1.0,0
+PPSINK90-40,Polypropylene sink 900mm width,1380.0,1.0,0
+PS-BX-045-045,static pass box size:450X450X450mm(h)(outer),4046.0,1.0,0
+PS-BX-057-053,static pass box size:570X530X590mm(H)(outer size),4046.0,1.0,0
+PU-CHAIR,PU lab chair,0.0,0.0,0.0
+PU-LBCHAIR,PU lab bench chair,0.0,0.0,0.0
+PU-LBCHAIRARM,pu seated height adjustable laboratory chair with arm rest and backrest,4046.0,1.0,0
+Q1GID045-40,tall storage cabinet with glass inbuilt door size:450x400x1800mm(h),752.0,1.5,0
+Q1GID045-40L,lockable tall storage cabinet with glass inbuilt door size:450x400x1800mm(h),752.0,1.5,0
+Q1GID050-40,tall storage cabinet with glass inbuilt door size:500x400x1800(h),752.0,1.75,0
+Q1GID050-40L,lockable tall storage cabinet with glass inbuilt door size:500x400x1800mm(h),752.0,1.75,0
+Q1GID060-40,tall storage cabinet with glass inbuilt door size:600x400x1800mm(h),752.0,1.75,0
+Q1GID060-40L,lockable tall storage cabinet with glass inbuilt door size:600x400x1800mm(h),752.0,1.75,0
+Q1PND045-40,tall storage cabinet with panel door size:450x400x1800mm(h),752.0,1.28,0
+Q1PND045-40L,lockable tall storage cabinet with panel door size:450x400x1800mm(h),752.0,1.28,0
+Q1PND050-40,tall storage cabinet with panel door size:500x400x1800mm(h),752.0,1.75,0
+Q1PND050-40L,lockable tall storage cabinet with panel door size:500x400x1800mm(h),752.0,1.75,0
+Q1PND060-40,tall storage cabinet with panel door size:600x400x1800mm(h),752.0,1.75,0
+Q1PND060-40L,lockable tall storage cabinet with panel door size:600x400x1800mm(h),752.0,1.75,0
+Q2GID090-40,tall storage cabinet with glass inbuilt doors size:900x400x1800mm(h),752.0,2.75,0
+Q2GID090-40L,lockable tall storage cabinet with glass inbuilt doors size:900x400x1800mm(h),752.0,2.75,0
+Q2GID100-40,tall storage cabinet with glass inbuilt doors size:1000x400x1800mm(h),752.0,2.75,0
+Q2GID100-40L,lockable tall storage cabinet with glass inbuilt doors  size:1000x400x1800mm(h),752.0,2.75,0
+Q2GID120-40,tall storage cabinet with glass inbuilt doors size:1200x400x1800mm(h),752.0,2.75,0
+Q2GID120-40L,lockable tall storage cabinet with glass inbuilt doors size:1200x400x1800mm(h),752.0,2.75,0
+Q2PND080-40,tall storage cabinet with panel doors size:800x400x1800mm(h),752.0,2.5,0
+Q2PND080-40L,lockable tall storage cabinet with panel doors size:800x400x1800mm(h),752.0,2.5,0
+Q2PND090-40,tall storage cabinet with panel doors size:900x400x1800mm(h),752.0,2.75,0
+Q2PND090-40L,lockable tall storage cabinet with panel doors size:900x400x1800mm(h),752.0,2.8,0
+Q2PND090-45,tall storage cabinet with panel doors size:900x450x1800mm(h),752.0,2.75,0
+Q2PND100-40,tall storage cabinet with panel doors size:1000x400x1800mm(h),752.0,2.75,0
+Q2PND100-40L,lockable tall storage cabinet with panel doors size:1000x400x1800mm(h),752.0,2.75,0
+Q2PND100-45,tall storage cabinet  with panel doors size:1000x450x1800mm(h),752.0,2.4,0
+Q2PND120-40,tall storage cabinet with panel doors size:1200x400x1800mm(h),752.0,2.75,0
+Q2PND120-40L,lockable tall storage cabinet with panel doors size:1200x400x1800mm(h),752.0,2.75,0
+Q2PND120-40LH,lockable tall storage cabinet with panel doors size:1200x400x2100mm(h),752.0,0.0,0
+Q2PND120-60LSP,"lockable tall storage cabinet, size:1200X600X1800mm (h)",752.0,2.75,0
+Q2PNDSLD090-60,Tall storage cabinet with panel doors 900mm wide,752.0,2.75,0
+QFDC50-60,"Filing drawer cabinet, size: 500x600x1500mm",752.0,1.25,0
+QO045-40,open tall storage cabinet size:450x400x1800mm(h),752.0,1.25,0
+QO050-40,open tall storage cabinet size:500x400x1800mm(h),752.0,1.25,0
+QO060-40,open tall storage cabinet size:600x400x1800mm(h),752.0,1.25,0
+QO075-40,open tall storage cabinet size:750x400x1800mm(h),752.0,1.75,0
+QO075-60,open tall storage cabinet 750 mm wide,752.0,1.75,0
+QO090-40,open tall storage cabinet size:900x400x1800mm(h),752.0,1.75,0
+QO100-40,open tall storage cabinet size:1000x400x1800mm(h),752.0,2.0,0
+QO110-40,open tall storage size:1100x400x1800mm(h),752.0,2.0,0
+QO120-30,open tall storage size:1200x300x1800(h),752.0,2.0,0
+QO120-40,open tall storage size:1200x400x1800mm(h),752.0,2.0,0
+QOD060-60,double side open tall storage cabinet with shelves size:600x600x1800mm(h),752.0,2.0,0
+QOD090-60,double side open tall storage cabinet with shelves size:900x600x1800mm(h),752.0,2.5,0
+QOD090-60SP,"double side open tall storage cabinet with shelves size:900x600x1800mm(h),special",752.0,2.4,0
+QOD100-60,double side open tall storage cabinet with shelves size:900x600x1800mm(h),752.0,2.5,0
+QOD120-60,double side open tall storage cabinet with shelves size:1200x600x1800mm(h),752.0,3.0,0
+RR1T-250MTL,one tier reagent rack 250 mm wide,1538.0,2.75,0
+RR1T-250MTLWS,one tier reagent rack 250 mm wide with service box,1538.0,2.75,0
+RR1T-300MTL,one tier reagent rack 300 mm wide,1538.0,2.75,0
+RR1T-300MTLWS,one tier reagent rack 300 mm wide with service box,1538.0,2.75,0
+RR2T-250MTL,two tier reagent rack 250 mm wide,1538.0,4.84,0
+RR2T-250MTLWS,two tier reagent rack  250 mm wide with service box,752.0,0.35,0
+RR2T-300MTLWS,two tier reagent rack 300 mm wide with service box,752.0,0.35,0
+RR3T240SP,two tier reagent rack with service box 240 mm wide,752.0,0.35,0
+S-DR-10x30,"service dropper size, 300x100mm(lxd)",752.0,0.75,0
+S-DR-30x90,"service dropper size, 900x300mm(lxd)",752.0,2.0,0
+S1GID045-30,wall mounted storage cabinet with glass inbuilt door size:450x300x600mm(h),752.0,0.5,0
+S1GID045-30L,lockable wall mounted storage cabinet with glass inbuilt door size:450x300x600mm(h),752.0,0.5,0
+S1GID050-30,wall mounted storage cabinet with glass inbuilt door size:500x300x600mm(h),752.0,0.5,0
+S1GID050-30L,lockable wall mounted storage cabinet with glass inbuilt door size:500x300x600mm(h),752.0,0.5,0
+S1GID060-30,wall mounted storage cabinet with glass inbuilt door size:600x300x600mm(h),752.0,0.5,0
+S1GID060-30L,lockable wall mounted storage cabinet with glass inbuilt door size:600x300x600mm(h),752.0,0.5,0
+S1PND045-30,wall mounted storage cabinet with panel door size:450x300x600mm(h),752.0,0.5,0
+S1PND045-30L,lockable wall mounted storage cabinet panel door size:450x300x600mm(h),752.0,0.5,0
+S1PND050-30,wall mounted storage cabinet with panel door size:500x300x600mm(h),752.0,0.5,0
+S1PND050-30L,lockable wall mounted storage cabinet with panel door size:500x300x600mm(h),752.0,0.5,0
+S1PND060-30,wall mounted storage cabinet with panel door size:600x300x600mm(h),752.0,0.5,0
+S1PND060-30L,lockable wall mounted storage cabinet panel door size:600x300x600mm(h),752.0,0.5,0
+S1SLD045-30,wall mounted storage cabinet with sliding glass door size:450x300x600mm(h),752.0,1.0,0
+S1SLD045-30L,lockable wall mounted storage cabinet with sliding glass door size:450x300x600mm(h),752.0,1.0,0
+S1SLD050-30,wall mounted storage cabinet with sliding glass door size:500x300x600mm(h),752.0,1.0,0
+S1SLD050-30L,lockable wall mounted storage cabinet with sliding glass door size:500x300x600mm(h),752.0,1.0,0
+S1SLD060-30,wall mounted storage cabinet with sliding glass door size:600x300x600mm(h),752.0,1.0,0
+S1SLD060-30L,lockable wall mounted storage cabinet with sliding glass door size:600x300x600mm(h),752.0,1.0,0
+S2GID090-30,wall mounted storage cabinet with glass inbuilt doors size:900x300x600mm(h),752.0,0.75,0
+S2GID090-30L,lockable wall mounted storage cabinet with glass inbuilt doors size:900x300x600mm(h),752.0,0.75,0
+S2GID100-30,wall mounted storage cabinet with glass inbuilt doors size:1000x300x600mm(h),752.0,0.75,0
+S2GID100-30L,lockable wall mounted storage cabinet with glass inbuilt doors size:1000x300x600mm(h),752.0,0.75,0
+S2GID120-30,wall mounted storage cabinet with glass inbuilt doors size:1200x300x600mm(h),752.0,1.0,0
+S2GID120-30L,lockable wall mounted storage cabinet with glass inbuilt doors size:1200x300x600mm(h),752.0,1.0,0
+S2PND090-30,wall mounted storage cabinet with panel doors size:900x300x600mm(h),752.0,0.7,0
+S2PND090-30L,lockable wall mounted storage cabinet with panel doors size:900x300x600mm(h),752.0,0.7,0
+S2PND100-30,wall mounted storage cabinet with panel doors size:1000x300x600mm(h),752.0,0.7,0
+S2PND100-30L,lockable wall mounted storage cabinet with panel doors size:1000x300x600mm(h),752.0,0.7,0
+S2PND120-30,wall mounted storage cabinet with panel doors size:1200x300x600mm(h),752.0,1.0,0
+S2PND120-30L,lockable wall mounted storage cabinet with panel doors size:1200x300x600mm(h),752.0,1.0,0
+S2SLD090-30,wall mounted storage cabinet with sliding glass doors size:900x300x600mm(h),752.0,1.0,0
+S2SLD090-30L,lockable wall mounted storage cabinet with sliding glass doors size:900x300x600mm(h),752.0,1.0,0
+S2SLD100-30,wall mounted storage cabinet with sliding glass doors size:1000x300x600mm(h),752.0,1.0,0
+S2SLD100-30L,lockable wall mounted storage cabinet with sliding glass doors size:1000x300x600mm(h),752.0,1.0,0
+S2SLD120-30,wall mounted storage cabinet with sliding glass doors size:1200x300x600mm(h),752.0,1.0,0
+S2SLD120-30L,lockable wall mounted storage cabinet with sliding glass doors size:1200x300x600mm(h),752.0,1.0,0
+SMLB150-75,"Smart mobile lab bench, size 1500x750x900(H)mm",752.0,2.75,0
+SO045-30,open wall mounted storage cabinet size:450x300x600mm(h),752.0,0.25,0
+SO050-30,open wall mounted storage cabinet size:500x300x600mm(h),752.0,0.25,0
+SO060-30,open wall mounted storage cabinet size:600x300x600mm(h),752.0,0.25,0
+SO090-30,open wall mounted storage cabinet size:900x300x600mm(h),752.0,0.25,0
+SO100-30,open wall mounted storage cabinet size:1000x300x600mm(h),752.0,0.25,0
+SO110-30,open wall mounted storage cabinet size:1100x300x600mm(h),752.0,0.25,0
+SO120-30,open wall mounted storage cabinet size:1200x300x600mm(h),752.0,0.25,0
+SRV-PLR,service piller,752.0,0.5,0
+SRVB150,service box 150mm wide,752.0,0.25,0
+SRVB200,service box 200mm wide,752.0,0.3,0
+SRVB300,service box 300mm wide,752.0,0.4,0
+SS SINK 2DB,stainless steel sink with double drain board,1380.0,1.0,0
+SS SINK 32,stainless steel sink 320 X320 mm,1380.0,1.0,0
+SS SINK DB,stainless steel sink with drain board,1380.0,1.0,0
+SS-SINK120-502BLDB,stainless steel sink with double bowl & drain board,1380.0,1.0,0
+SS-SINK40-35DB,"stainless steel sink with drain board, bowl size 400x350mm",1380.0,1.0,0
+SS-SINK40-40,stainless steel sink 400x400 mm,0.0,0.0,0.0
+SS-SINK61-45,stainless steel sink,1380.0,1.0,0
+SS-SINK90-40,stainless steel sink 900mm wide,1380.0,1.0,0
+STRIP,supporting strip,752.0,0.2,0
+TP300-200,Teacher platform size:3000x2000x150mm,752.0,5.0,0
+TQCS080-40,chemical storage cabinet size:800x400x1500mm(h),1965.0,2.0,0
+TQCS080-40EX,chemical storage cabinet with exhaust size:800x400x1500mm(h),1965.0,1.75,0
+TQCS090-40,chemical storage cabinet size:900x400x1500mm(h),1965.0,2.0,0
+TQCS090-40EX,chemical storage cabinet with exhaust size:900x400x1500mm (h),1965.0,2.0,0
+TQCS100-40,chemical storage cabinet size:1000x400x1500 mm,1965.0,2.0,0
+TQCS100-40EX,chemical storage cabinet with exhaust size:1000x450x1500mm,1965.0,2.0,0
+VAG-120,"fume cupboard 1225mm wide services are water, gas(lpg)&electrical with vsb 20",1513.0,0.25,0
+VAG-150,"fume cupboard 1525mm wide services are water,gas & electrical with  vsb 25",1362.0,0.25,0
+VAG-180,"fume cupboard 1825mm wide services are water,gas & electrical with  vsb 30",1362.0,0.25,0
+VBFC-120,"minor b fume cupboard 1225mm wide services are electrical,gas(lpg) & water with vsb 20",1513.0,0.25,0
+VFC-120,"Semtinel fume cupboard 1250mm wide services are water, gas(lpg)&electrical with vsb 20",1513.0,0.25,0
+VFC-150,"Semtinel fume cupboard 1550mm wide services are water, gas(lpg)&electrical with vsb 25",1513.0,0.25,0
+VFC-180,"Semtinel fume cupboard 1850mm wide services are water, gas(lpg)&electrical with vsb 30",1513.0,0.25,0
+VSTCHAIR,visitor chair without arm rest & castors,4049.0,1.0,0
+WCH060-60,Wall mounted canopy hood 600x600mm,2582.0,1.0,0
+WCH090-60,Wall mounted canopy hood 900x600mm,2582.0,1.0,0
+WCH090-75,Wall mounted canopy hood 900x750mm,2582.0,1.0,0
+WCH100-60,Wall mounted canopy hood 1000x600mm,2582.0,1.0,0
+WCH100-75,Wall mounted canopy hood 1000x750mm,2582.0,1.0,0
+WCH120-60,Wall mounted canopy hood 1200x750mm,2588.0,1.0,0
+WCH120-75,Wall mounted canopy hood 1200x750mm,2588.0,1.0,0
+WCH150-75,Wall mounted canopy hood size 1500x750mm,2588.0,1.0,0
+WCH180-60,wall mounted canopy hood size1800x600mm,2611.0,1.0,0
+WMSUCTARM,wall mounted suction arm with vsb14,2611.0,1.0,0
+WMSUCTARM-IN,wall mounted suction arm,2611.0,1.0,0

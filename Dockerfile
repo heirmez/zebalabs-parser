@@ -32,6 +32,9 @@ COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY main.py .
+COPY material_expansion.py .
+COPY procurement_logic.py .
+COPY *.csv ./
 
 EXPOSE 8000
 CMD ["python3", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

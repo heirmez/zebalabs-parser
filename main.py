@@ -55,9 +55,10 @@ LIBREDWG_DWG2DXF = os.environ.get(
     "DWG2DXF_PATH",
     os.path.join(CADAPP_DIR, "tools", "libredwg", "dwg2dxf.exe"),
 )
+_catalog_local = os.path.join(SCRIPT_DIR, "catalog.csv")
 CATALOG_PATH = os.environ.get(
     "CATALOG_PATH",
-    os.path.join(CADAPP_DIR, "catalog.csv"),
+    _catalog_local if os.path.isfile(_catalog_local) else os.path.join(CADAPP_DIR, "catalog.csv"),
 )
 # raw_materials.csv: exported from tblItem via scripts/export-raw-materials.py
 # Drop the file alongside main.py (or set RAW_MATERIALS_PATH env var).
