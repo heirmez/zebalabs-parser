@@ -23,6 +23,23 @@ from pathlib import Path
 
 app = FastAPI(title="Zebalabs DWG/DXF Parser")
 
+# ── Startup validation ────────────────────────────────────────────────────
+
+@app.on_event("startup")
+def validate_dwg2dxf():
+    """Fail fast if dwg2dxf binary is missing or broken."""
+    path = shutil.which("dwg2dxf")
+    if not path:
+        import warnings
+        warnings.warn("dwg2dxf not found on PATH — DWG upload will fail")
+        return
+    try:
+        result = subprocess.run(["dwg2dxf", "--version"], capture_output=True, check=True)
+        print(f"[startup] dwg2dxf OK: {result.stdout.decode().strip()[:80] or result.stderr.decode().strip()[:80]}")
+    except Exception as e:
+        raise RuntimeError(f"dwg2dxf binary is broken: {e}")
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Lock down in production
@@ -42,7 +59,23 @@ CATALOG_PATH = os.environ.get(
     "CATALOG_PATH",
     os.path.join(CADAPP_DIR, "catalog.csv"),
 )
-ODA_CONVERTER = os.environ.get("ODA_CONVERTER_PATH", "")
+# raw_materials.csv: exported from tblItem via scripts/export-raw-materials.py
+# Drop the file alongside main.py (or set RAW_MATERIALS_PATH env var).
+# When present, /extract returns level2_bom (raw material expansion).
+# When absent, only Level 1 component data is returned.
+RAW_MATERIALS_PATH = os.environ.get(
+    "RAW_MATERIALS_PATH",
+    os.path.join(SCRIPT_DIR, "raw_materials.csv"),
+)
+# ODA File Converter binary — used directly when installed in the container
+_ODA_CANDIDATES = [
+    os.environ.get("ODA_PATH", ""),
+    "/usr/bin/ODAFileConverter",
+    shutil.which("ODAFileConverter") or "",
+]
+LOCAL_ODA_PATH = next((p for p in _ODA_CANDIDATES if p and os.path.isfile(p)), "")
+
+# ODA microservice URL — set when ODA runs as a separate HTTP service
 ODA_SERVICE_URL = os.environ.get("ODA_SERVICE_URL", "").rstrip("/")
 
 # Layers to skip — these are structural/dimension layers, not rooms
@@ -91,18 +124,45 @@ def _detect_dwg_version(dwg_path: str) -> str:
         return "Unknown"
 
 
-def convert_dwg_to_dxf(dwg_path: str) -> str:
-    """Convert DWG → DXF using multiple strategies with fallbacks.
-
-    Returns path to converted DXF file.
-    Raises HTTPException if all methods fail.
+def _oda_convert_local(dwg_path: str) -> tuple[str, str] | None:
+    """Use locally installed ODA binary to convert DWG -> DXF.
+    Returns (dxf_path, 'oda_local') or None on failure.
     """
-    dwg_version = _detect_dwg_version(dwg_path)
-    errors = []
+    if not LOCAL_ODA_PATH:
+        return None
+    import glob as _glob
+    try:
+        in_dir = os.path.dirname(dwg_path)
+        out_dir = tempfile.mkdtemp(prefix="oda_out_")
+        result = subprocess.run(
+            [LOCAL_ODA_PATH, in_dir, out_dir, "ACAD2018", "DXF", "0", "1",
+             os.path.basename(dwg_path)],
+            capture_output=True, text=True, timeout=120,
+        )
+        dxf_files = _glob.glob(os.path.join(out_dir, "*.dxf"))
+        if dxf_files and os.path.getsize(dxf_files[0]) > 0:
+            print(f"[convert] ODA local OK -> {os.path.getsize(dxf_files[0])} bytes")
+            return dxf_files[0], "oda_local"
+        print(f"[convert] ODA local no output: {result.stderr[:200]}")
+    except Exception as e:
+        print(f"[convert] ODA local error: {e}")
+    return None
 
-    # Strategy 0: Remote ODA microservice — most reliable for AC1032
-    # Set ODA_SERVICE_URL env var to enable (e.g. https://oda.example.com)
+
+def convert_dwg_to_dxf(dwg_path: str) -> tuple[str, str]:
+    """Convert DWG -> DXF.
+
+    Priority:
+      1. ODA microservice (ODA_SERVICE_URL env var) - production Railway
+      2. ODA local binary (LOCAL_ODA_PATH / ODA_PATH env var) - Docker with ODA installed
+      3. LibreDWG dwg2dxf - fallback
+
+    Returns (dxf_path, converter_used).
+    Raises HTTPException if all fail.
+    """
+    # 1. ODA microservice
     if ODA_SERVICE_URL:
+        print(f"[convert] Using ODA service: {ODA_SERVICE_URL}")
         try:
             import requests as _requests
             with open(dwg_path, "rb") as f:
@@ -116,70 +176,47 @@ def convert_dwg_to_dxf(dwg_path: str) -> str:
                 dxf_out = dwg_path.rsplit(".", 1)[0] + "_oda.dxf"
                 with open(dxf_out, "wb") as f:
                     f.write(resp.content)
-                return dxf_out
-            errors.append(f"ODA service: HTTP {resp.status_code} — {resp.text[:200]}")
+                print(f"[convert] ODA service OK -> {os.path.getsize(dxf_out)} bytes")
+                return dxf_out, "oda_service"
+            print(f"[convert] ODA service failed: HTTP {resp.status_code} - {resp.text[:200]}")
         except Exception as e:
-            errors.append(f"ODA service: {e}")
+            print(f"[convert] ODA service error: {e}")
 
-    # Strategy 1: ODA File Converter — best for AC1032 (AutoCAD 2018+)
-    oda_path = _find_oda_converter()
-    if oda_path:
-        try:
-            input_dir = os.path.dirname(dwg_path)
-            output_dir = tempfile.mkdtemp(prefix="oda_output_")
-            input_filename = os.path.basename(dwg_path)
-            result = subprocess.run(
-                [oda_path, input_dir, output_dir, "ACAD2018", "DXF", "0", "1", input_filename],
-                capture_output=True, text=True, timeout=120,
-            )
-            import glob
-            dxf_files = glob.glob(os.path.join(output_dir, "*.dxf"))
-            if dxf_files and os.path.getsize(dxf_files[0]) > 0:
-                return dxf_files[0]
-            errors.append(f"ODA: no output. stderr={result.stderr[:200] if result.stderr else 'none'}")
-        except Exception as e:
-            errors.append(f"ODA: {e}")
+    # 2. ODA local binary (installed in Docker image)
+    if LOCAL_ODA_PATH:
+        print(f"[convert] Using ODA local: {LOCAL_ODA_PATH}")
+        result = _oda_convert_local(dwg_path)
+        if result:
+            return result
 
-    # Strategy 2: ezdxf odafc addon (uses ODA File Converter via ezdxf wrapper)
-    try:
-        from ezdxf.addons import odafc
-        dxf_path = dwg_path.rsplit(".", 1)[0] + ".dxf"
-        odafc.convert(dwg_path, dxf_path)
-        if os.path.isfile(dxf_path) and os.path.getsize(dxf_path) > 0:
-            return dxf_path
-        errors.append("odafc: conversion produced no output")
-    except Exception as e:
-        errors.append(f"odafc: {e}")
-
-    # Strategy 3: LibreDWG dwg2dxf on system PATH (compiled into Docker image)
-    dwg2dxf_sys = shutil.which("dwg2dxf") or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
-    # Skip zero-byte stubs left by failed Docker build
-    if dwg2dxf_sys and os.path.getsize(dwg2dxf_sys) == 0:
-        dwg2dxf_sys = None
-    if dwg2dxf_sys:
+    # 3. LibreDWG dwg2dxf
+    dwg2dxf_bin = shutil.which("dwg2dxf") or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
+    if dwg2dxf_bin and os.path.getsize(dwg2dxf_bin) > 0:
+        print(f"[convert] Using LibreDWG: {dwg2dxf_bin}")
         try:
             tmp_dir = tempfile.mkdtemp(prefix="cadplan_")
-            safe_base = re.sub(r'[^\w\-.]', '_', Path(dwg_path).stem)
+            safe_base = re.sub(r"[^\w\-.]", "_", Path(dwg_path).stem)
             dxf_out = os.path.join(tmp_dir, f"{safe_base}.dxf")
             result = subprocess.run(
-                [dwg2dxf_sys, "-y", "-o", dxf_out, dwg_path],
+                [dwg2dxf_bin, "-y", "-o", dxf_out, dwg_path],
                 capture_output=True, text=True, timeout=120,
             )
             if os.path.isfile(dxf_out) and os.path.getsize(dxf_out) > 0:
-                return dxf_out
-            errors.append(f"LibreDWG: output empty. stderr={result.stderr[:200] if result.stderr else 'none'}")
+                print(f"[convert] LibreDWG OK -> {os.path.getsize(dxf_out)} bytes")
+                return dxf_out, "libredwg"
+            print(f"[convert] LibreDWG no output: {result.stderr[:200]}")
         except Exception as e:
-            errors.append(f"LibreDWG: {e}")
+            print(f"[convert] LibreDWG error: {e}")
+    else:
+        print("[convert] LibreDWG binary not available")
 
-    detail = (
-        f"DWG conversion failed for {dwg_version} file. All strategies exhausted.\n"
-        + "\n".join(f"  - {e}" for e in errors) + "\n\n"
-        "Solutions:\n"
-        "  1. Set ODA_SERVICE_URL env var to the deployed ODA microservice URL\n"
-        "  2. Save the file as DXF in AutoCAD (File → Save As → DXF)\n"
-        "  3. Install ODA File Converter in this container: https://www.opendesign.com/guestfiles/oda_file_converter\n"
+    dwg_version = _detect_dwg_version(dwg_path)
+    raise HTTPException(
+        400,
+        f"DWG conversion failed ({dwg_version}). "
+        "Set ODA_SERVICE_URL env var to the deployed ODA microservice, "
+        "or upload a DXF file directly.",
     )
-    raise HTTPException(400, detail)
 
 
 def _find_oda_converter() -> str:
@@ -200,41 +237,32 @@ def _find_oda_converter() -> str:
 # ── SORTENTSTABLE Fix ────────────────────────────────────────────────────
 
 def fix_dxf(dxf_path: str) -> str:
-    """Strip SORTENTSTABLE objects that crash ezdxf.
+    """Strip SORTENTSTABLE entity instances that crash ezdxf.
 
     LibreDWG's dwg2dxf produces DXF files containing SORTENTSTABLE objects
-    in the OBJECTS section. ezdxf cannot parse these and raises errors.
-    This function strips them out, writing a _fixed.dxf if changes were made.
+    in the OBJECTS section with invalid group-code 331 where ezdxf expects 5.
+    This function strips them out using a regex that matches entity boundaries
+    (group code 0 = entity start in DXF), writing a _fixed.dxf if changes were made.
+
+    Only entity instances (preceded by group code 0) are stripped — the CLASS
+    declaration in the CLASSES section is preserved.
     """
+    import re
     with open(dxf_path, "r", errors="replace") as f:
         content = f.read()
 
     if "SORTENTSTABLE" not in content:
         return dxf_path
 
-    lines = content.split("\n")
-    fixed = []
-    i = 0
-    removed = 0
+    # Match each SORTENTSTABLE entity: starts at group-code-0 line, ends just
+    # before the next group-code-0 line that begins a new entity (capital letter value).
+    pattern = r"(?ms)^\s*0\s*\nSORTENTSTABLE\n.*?(?=^\s*0\s*\n[A-Z])"
+    fixed, n = re.subn(pattern, "", content)
 
-    while i < len(lines):
-        if lines[i].strip() == "SORTENTSTABLE":
-            # Remove the preceding "0" group code line
-            if fixed and fixed[-1].strip() == "0":
-                fixed.pop()
-            # Skip past the entire SORTENTSTABLE object
-            i += 1
-            while i < len(lines) and lines[i].strip() != "0":
-                i += 1
-            removed += 1
-            continue
-        fixed.append(lines[i])
-        i += 1
-
-    if removed > 0:
+    if n > 0:
         fixed_path = dxf_path.replace(".dxf", "_fixed.dxf")
-        with open(fixed_path, "w") as f:
-            f.write("\n".join(fixed))
+        with open(fixed_path, "w", errors="replace") as f:
+            f.write(fixed)
         return fixed_path
 
     return dxf_path
@@ -245,7 +273,74 @@ def fix_dxf(dxf_path: str) -> str:
 MAX_BLOCK_DEPTH = 10  # Prevent infinite recursion
 
 
-def extract_bom(dxf_path: str) -> dict:
+def _purge_sortentstable(doc) -> int:
+    """Delete SORTENTSTABLE entities directly from doc.entitydb.
+
+    Iterating doc.objects triggers lazy parsing of SORTENTSTABLE, which is
+    what causes DXFStructureError("Invalid sort handle code N, expected 5").
+    Instead we iterate doc.entitydb — a plain {handle: entity} dict — which
+    accesses already-parsed objects only, then delete by handle before any
+    blocks/modelspace iteration can trigger the bad parse path.
+    """
+    removed = 0
+    try:
+        handles_to_remove = []
+        for handle in list(doc.entitydb.keys()):
+            try:
+                entity = doc.entitydb[handle]
+                if hasattr(entity, "dxftype") and callable(entity.dxftype):
+                    if entity.dxftype() == "SORTENTSTABLE":
+                        handles_to_remove.append(handle)
+            except Exception:
+                pass
+        for handle in handles_to_remove:
+            try:
+                del doc.entitydb[handle]
+                removed += 1
+            except Exception:
+                pass
+    except Exception:
+        pass
+    return removed
+
+
+def load_dxf(dxf_path: str):
+    """Open a DXF file tolerantly, returning an ezdxf document.
+
+    Pre-processes with fix_dxf() to strip SORTENTSTABLE entities that have
+    invalid group-code 331 (LibreDWG output) — recover.read() itself fails on
+    these, so they must be removed from the text before loading.
+
+    Uses ezdxf.recover.read() (binary stream) to handle LibreDWG's remaining
+    corrupt group codes (e.g. "DC750").  Falls back to ezdxf.readfile() for
+    well-formed DXF so normal DXF uploads still work.
+    """
+    # Strip SORTENTSTABLE entities from the text before ezdxf sees them.
+    # recover.read() cannot handle the invalid group-code-331 in these objects.
+    fixed_path = fix_dxf(dxf_path)
+    cleanup_fixed = fixed_path != dxf_path  # True if a new _fixed.dxf was written
+    try:
+        from ezdxf import recover
+        with open(fixed_path, "rb") as _stream:
+            doc, auditor = recover.read(_stream)
+        if auditor.has_errors:
+            import logging
+            logging.getLogger("ezdxf").warning(
+                f"DXF recover: {len(auditor.errors)} fixable errors in {fixed_path}"
+            )
+        return doc
+    except Exception:
+        doc = ezdxf.readfile(fixed_path)
+        return doc
+    finally:
+        if cleanup_fixed:
+            try:
+                os.unlink(fixed_path)
+            except OSError:
+                pass
+
+
+def extract_bom(dxf_path: str):
     """Extract room → furniture → component hierarchy from DXF.
 
     This is the PROVEN logic from cadapp/extract.py with edge-case hardening:
@@ -255,13 +350,15 @@ def extract_bom(dxf_path: str) -> dict:
     4. Group components by name, collect xscale values
     5. Determine unit: all |xscale| ≈ 1.0 → "no" (count), else → "rm" (sum of |xscale|)
 
+    Returns (bom_dict, doc) so the caller can reuse the already-parsed doc.
+
     Edge cases handled:
     - Circular reference detection (visited set)
     - Depth limit (MAX_BLOCK_DEPTH = 10)
     - Malformed entity handling (try/except per entity)
     - Empty/missing block definitions (skipped gracefully)
     """
-    doc = ezdxf.readfile(dxf_path)
+    doc = load_dxf(dxf_path)
     msp = doc.modelspace()
     block_defs = {b.name: b for b in doc.blocks if not b.name.startswith("*")}
 
@@ -363,7 +460,7 @@ def extract_bom(dxf_path: str) -> dict:
         if benches:
             result_layers[layer_name] = {"benches": benches}
 
-    return {"layers": result_layers}
+    return {"layers": result_layers}, doc
 
 
 # ── Format Response for Frontend ─────────────────────────────────────────
@@ -380,31 +477,36 @@ def format_response(bom: dict, filename: str, doc, catalog: dict) -> dict:
     # Collect room labels from text entities
     room_labels = {}
     for entity in msp:
-        if entity.dxftype() in ("TEXT", "MTEXT"):
+        try:
+            if entity.dxftype() not in ("TEXT", "MTEXT"):
+                continue
             layer = entity.dxf.layer
-            try:
-                text = entity.dxf.text if hasattr(entity.dxf, "text") else ""
-                if text and len(text) > 3:
-                    room_labels[layer] = text.strip()
-            except Exception:
-                pass
+            text = entity.dxf.text if hasattr(entity.dxf, "text") else ""
+            if text and len(text) > 3:
+                room_labels[layer] = text.strip()
+        except Exception:
+            pass
 
     # Build block_definitions for frontend
     block_definitions = {}
     for block in doc.blocks:
-        if block.name.startswith("*"):
+        try:
+            if block.name.startswith("*"):
+                continue
+        except Exception:
             continue
-        nested = [
-            e.dxf.name for e in block
-            if e.dxftype() == "INSERT" and not e.dxf.name.startswith("*")
-        ]
+        nested = []
         attrib_names = []
         for e in block:
-            if e.dxftype() == "ATTDEF":
-                try:
+            try:
+                if e.dxftype() == "INSERT":
+                    name = e.dxf.name
+                    if not name.startswith("*"):
+                        nested.append(name)
+                elif e.dxftype() == "ATTDEF":
                     attrib_names.append(e.dxf.tag)
-                except Exception:
-                    pass
+            except Exception:
+                continue
         block_definitions[block.name] = {
             "name": block.name,
             "entity_count": len(list(block)),
@@ -482,32 +584,58 @@ async def extract_dwg(file: UploadFile = File(...)):
         tmp_path = tmp.name
 
     cleanup_paths = [tmp_path]
+    converter_used = "none"
 
     try:
         dxf_path = tmp_path
 
         # Convert DWG → DXF if needed
         if ext == ".dwg":
-            dxf_path = convert_dwg_to_dxf(tmp_path)
+            dxf_path, converter_used = convert_dwg_to_dxf(tmp_path)
             if dxf_path != tmp_path:
                 cleanup_paths.append(dxf_path)
 
-        # Fix SORTENTSTABLE corruption (LibreDWG output)
-        fixed_path = fix_dxf(dxf_path)
-        if fixed_path != dxf_path:
-            cleanup_paths.append(fixed_path)
-            dxf_path = fixed_path
-
-        # Extract BOM hierarchy
-        bom = extract_bom(dxf_path)
+        # Extract BOM hierarchy (also returns the already-parsed doc — don't re-read)
+        try:
+            bom, doc = extract_bom(dxf_path)
+        except Exception as exc:
+            raise HTTPException(
+                status_code=422,
+                detail=f"DXF parsing failed: {type(exc).__name__}: {exc}",
+            )
 
         # Load catalog for descriptions
         catalog = load_catalog()
 
-        # Re-read doc for room labels and block definitions
-        doc = ezdxf.readfile(dxf_path)
+        result = format_response(bom, file.filename, doc, catalog)
+        result["converter_used"] = converter_used
 
-        return format_response(bom, file.filename, doc, catalog)
+        # ── Level 2 BOM: expand components -> raw materials ──────────────────
+        try:
+            from material_expansion import load_tbl_item, expand_components, to_flat_list
+            from procurement_logic import compute_procurement
+            by_code, by_id = load_tbl_item(RAW_MATERIALS_PATH)
+            if by_code:
+                raw_materials_agg = expand_components(result["rooms"], by_code, by_id)
+                flat = to_flat_list(raw_materials_agg)
+                procurement = compute_procurement(flat)
+                result["level2_bom"] = flat
+                result["procurement"] = procurement
+                result["stats"]["raw_materials_loaded"] = True
+                result["stats"]["level2_items"] = len(flat)
+            else:
+                result["level2_bom"] = []
+                result["procurement"] = []
+                result["stats"]["raw_materials_loaded"] = False
+                result["stats"]["level2_items"] = 0
+        except Exception as lvl2_err:
+            print(f"[level2] expansion failed: {lvl2_err}")
+            result["level2_bom"] = []
+            result["procurement"] = []
+            result["stats"]["raw_materials_loaded"] = False
+            result["stats"]["level2_items"] = 0
+
+        return result
 
     finally:
         for path in cleanup_paths:
@@ -537,12 +665,12 @@ async def debug_xscale(file: UploadFile = File(...)):
     try:
         dxf_path = tmp_path
         if ext == ".dwg":
-            dxf_path = convert_dwg_to_dxf(tmp_path)
+            dxf_path, _ = convert_dwg_to_dxf(tmp_path)
         fixed_path = fix_dxf(dxf_path)
         if fixed_path != dxf_path:
             dxf_path = fixed_path
 
-        doc = ezdxf.readfile(dxf_path)
+        doc = load_dxf(dxf_path)
         msp = doc.modelspace()
         block_defs = {b.name: b for b in doc.blocks if not b.name.startswith("*")}
 
@@ -595,36 +723,45 @@ async def debug_xscale(file: UploadFile = File(...)):
 
 @app.get("/health")
 async def health():
-    """Health check with converter and catalog status."""
-    oda_which = shutil.which("ODAFileConverter")
-    oda_find = _find_oda_converter()
-    oda_path = oda_find or oda_which or None
-
-    dwg2dxf_which = shutil.which("dwg2dxf")
-    libredwg_path = dwg2dxf_which or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
-    # Verify dwg2dxf isn't a zero-byte stub
-    if libredwg_path and os.path.isfile(libredwg_path) and os.path.getsize(libredwg_path) == 0:
-        libredwg_path = None
-
-    odafc_available = False
-    try:
-        from ezdxf.addons import odafc
-        odafc_available = True
-    except ImportError:
-        pass
+    """Health check — shows active converter and catalog status."""
+    dwg2dxf_path = shutil.which("dwg2dxf") or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
+    if dwg2dxf_path and os.path.getsize(dwg2dxf_path) == 0:
+        dwg2dxf_path = None
 
     catalog = load_catalog()
+
+    # Raw materials / Level 2 BOM status
+    try:
+        from material_expansion import load_tbl_item
+        by_code, _ = load_tbl_item(RAW_MATERIALS_PATH)
+        raw_materials_items = len(by_code)
+        raw_materials_path = RAW_MATERIALS_PATH if by_code else None
+    except Exception:
+        raw_materials_items = 0
+        raw_materials_path = None
+
+    if ODA_SERVICE_URL:
+        primary = "oda_service"
+    elif LOCAL_ODA_PATH:
+        primary = "oda_local"
+    elif dwg2dxf_path:
+        primary = "libredwg"
+    else:
+        primary = "none"
 
     return {
         "status": "ok",
         "ezdxf_version": ezdxf.__version__,
-        "dwg_support": bool(ODA_SERVICE_URL) or bool(oda_path) or bool(libredwg_path) or odafc_available,
+        "dwg_support": bool(ODA_SERVICE_URL or LOCAL_ODA_PATH or dwg2dxf_path),
+        "primary_converter": primary,
         "converters": {
             "oda_service": ODA_SERVICE_URL or None,
-            "local_oda": oda_path,
-            "dwg2dxf": libredwg_path,
-            "odafc_addon": odafc_available,
+            "oda_local": LOCAL_ODA_PATH or None,
+            "libredwg": dwg2dxf_path,
         },
         "catalog_items": len(catalog),
         "catalog_path": CATALOG_PATH if catalog else None,
+        "raw_materials_items": raw_materials_items,
+        "raw_materials_path": raw_materials_path,
+        "level2_bom": raw_materials_items > 0,
     }
