@@ -59,7 +59,15 @@ CATALOG_PATH = os.environ.get(
     "CATALOG_PATH",
     os.path.join(CADAPP_DIR, "catalog.csv"),
 )
-ODA_CONVERTER = os.environ.get("ODA_CONVERTER_PATH", "")
+# ODA File Converter binary — used directly when installed in the container
+_ODA_CANDIDATES = [
+    os.environ.get("ODA_PATH", ""),
+    "/usr/bin/ODAFileConverter",
+    shutil.which("ODAFileConverter") or "",
+]
+LOCAL_ODA_PATH = next((p for p in _ODA_CANDIDATES if p and os.path.isfile(p)), "")
+
+# ODA microservice URL — set when ODA runs as a separate HTTP service
 ODA_SERVICE_URL = os.environ.get("ODA_SERVICE_URL", "").rstrip("/")
 
 # Layers to skip — these are structural/dimension layers, not rooms
@@ -108,16 +116,43 @@ def _detect_dwg_version(dwg_path: str) -> str:
         return "Unknown"
 
 
-def convert_dwg_to_dxf(dwg_path: str) -> tuple[str, str]:
-    """Convert DWG → DXF.
+def _oda_convert_local(dwg_path: str) -> tuple[str, str] | None:
+    """Use locally installed ODA binary to convert DWG -> DXF.
+    Returns (dxf_path, 'oda_local') or None on failure.
+    """
+    if not LOCAL_ODA_PATH:
+        return None
+    import glob as _glob
+    try:
+        in_dir = os.path.dirname(dwg_path)
+        out_dir = tempfile.mkdtemp(prefix="oda_out_")
+        result = subprocess.run(
+            [LOCAL_ODA_PATH, in_dir, out_dir, "ACAD2018", "DXF", "0", "1",
+             os.path.basename(dwg_path)],
+            capture_output=True, text=True, timeout=120,
+        )
+        dxf_files = _glob.glob(os.path.join(out_dir, "*.dxf"))
+        if dxf_files and os.path.getsize(dxf_files[0]) > 0:
+            print(f"[convert] ODA local OK -> {os.path.getsize(dxf_files[0])} bytes")
+            return dxf_files[0], "oda_local"
+        print(f"[convert] ODA local no output: {result.stderr[:200]}")
+    except Exception as e:
+        print(f"[convert] ODA local error: {e}")
+    return None
 
-    Primary: ODA microservice (set ODA_SERVICE_URL env var).
-    Fallback: LibreDWG dwg2dxf binary (local/Docker only).
+
+def convert_dwg_to_dxf(dwg_path: str) -> tuple[str, str]:
+    """Convert DWG -> DXF.
+
+    Priority:
+      1. ODA microservice (ODA_SERVICE_URL env var) - production Railway
+      2. ODA local binary (LOCAL_ODA_PATH / ODA_PATH env var) - Docker with ODA installed
+      3. LibreDWG dwg2dxf - fallback
 
     Returns (dxf_path, converter_used).
-    Raises HTTPException if both fail.
+    Raises HTTPException if all fail.
     """
-    # Primary: ODA microservice
+    # 1. ODA microservice
     if ODA_SERVICE_URL:
         print(f"[convert] Using ODA service: {ODA_SERVICE_URL}")
         try:
@@ -138,13 +173,18 @@ def convert_dwg_to_dxf(dwg_path: str) -> tuple[str, str]:
             print(f"[convert] ODA service failed: HTTP {resp.status_code} - {resp.text[:200]}")
         except Exception as e:
             print(f"[convert] ODA service error: {e}")
-    else:
-        print("[convert] ODA_SERVICE_URL not set - skipping ODA service")
 
-    # Fallback: LibreDWG dwg2dxf
+    # 2. ODA local binary (installed in Docker image)
+    if LOCAL_ODA_PATH:
+        print(f"[convert] Using ODA local: {LOCAL_ODA_PATH}")
+        result = _oda_convert_local(dwg_path)
+        if result:
+            return result
+
+    # 3. LibreDWG dwg2dxf
     dwg2dxf_bin = shutil.which("dwg2dxf") or (LIBREDWG_DWG2DXF if os.path.isfile(LIBREDWG_DWG2DXF) else None)
     if dwg2dxf_bin and os.path.getsize(dwg2dxf_bin) > 0:
-        print(f"[convert] Falling back to LibreDWG: {dwg2dxf_bin}")
+        print(f"[convert] Using LibreDWG: {dwg2dxf_bin}")
         try:
             tmp_dir = tempfile.mkdtemp(prefix="cadplan_")
             safe_base = re.sub(r"[^\w\-.]", "_", Path(dwg_path).stem)
@@ -156,7 +196,7 @@ def convert_dwg_to_dxf(dwg_path: str) -> tuple[str, str]:
             if os.path.isfile(dxf_out) and os.path.getsize(dxf_out) > 0:
                 print(f"[convert] LibreDWG OK -> {os.path.getsize(dxf_out)} bytes")
                 return dxf_out, "libredwg"
-            print(f"[convert] LibreDWG produced no output: {result.stderr[:200]}")
+            print(f"[convert] LibreDWG no output: {result.stderr[:200]}")
         except Exception as e:
             print(f"[convert] LibreDWG error: {e}")
     else:
@@ -656,15 +696,23 @@ async def health():
 
     catalog = load_catalog()
 
-    primary = "oda_service" if ODA_SERVICE_URL else ("libredwg" if dwg2dxf_path else "none")
+    if ODA_SERVICE_URL:
+        primary = "oda_service"
+    elif LOCAL_ODA_PATH:
+        primary = "oda_local"
+    elif dwg2dxf_path:
+        primary = "libredwg"
+    else:
+        primary = "none"
 
     return {
         "status": "ok",
         "ezdxf_version": ezdxf.__version__,
-        "dwg_support": bool(ODA_SERVICE_URL or dwg2dxf_path),
+        "dwg_support": bool(ODA_SERVICE_URL or LOCAL_ODA_PATH or dwg2dxf_path),
         "primary_converter": primary,
         "converters": {
             "oda_service": ODA_SERVICE_URL or None,
+            "oda_local": LOCAL_ODA_PATH or None,
             "libredwg": dwg2dxf_path,
         },
         "catalog_items": len(catalog),
