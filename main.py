@@ -59,6 +59,14 @@ CATALOG_PATH = os.environ.get(
     "CATALOG_PATH",
     os.path.join(CADAPP_DIR, "catalog.csv"),
 )
+# raw_materials.csv: exported from tblItem via scripts/export-raw-materials.py
+# Drop the file alongside main.py (or set RAW_MATERIALS_PATH env var).
+# When present, /extract returns level2_bom (raw material expansion).
+# When absent, only Level 1 component data is returned.
+RAW_MATERIALS_PATH = os.environ.get(
+    "RAW_MATERIALS_PATH",
+    os.path.join(SCRIPT_DIR, "raw_materials.csv"),
+)
 # ODA File Converter binary — used directly when installed in the container
 _ODA_CANDIDATES = [
     os.environ.get("ODA_PATH", ""),
@@ -601,6 +609,32 @@ async def extract_dwg(file: UploadFile = File(...)):
 
         result = format_response(bom, file.filename, doc, catalog)
         result["converter_used"] = converter_used
+
+        # ── Level 2 BOM: expand components -> raw materials ──────────────────
+        try:
+            from material_expansion import load_tbl_item, expand_components, to_flat_list
+            from procurement_logic import compute_procurement
+            tbl_item = load_tbl_item(RAW_MATERIALS_PATH)
+            if tbl_item:
+                raw_materials_agg = expand_components(result["rooms"], tbl_item)
+                flat = to_flat_list(raw_materials_agg)
+                procurement = compute_procurement(flat)
+                result["level2_bom"] = flat
+                result["procurement"] = procurement
+                result["stats"]["raw_materials_loaded"] = True
+                result["stats"]["level2_items"] = len(flat)
+            else:
+                result["level2_bom"] = []
+                result["procurement"] = []
+                result["stats"]["raw_materials_loaded"] = False
+                result["stats"]["level2_items"] = 0
+        except Exception as lvl2_err:
+            print(f"[level2] expansion failed: {lvl2_err}")
+            result["level2_bom"] = []
+            result["procurement"] = []
+            result["stats"]["raw_materials_loaded"] = False
+            result["stats"]["level2_items"] = 0
+
         return result
 
     finally:
@@ -696,6 +730,16 @@ async def health():
 
     catalog = load_catalog()
 
+    # Raw materials / Level 2 BOM status
+    try:
+        from material_expansion import load_tbl_item
+        tbl_item = load_tbl_item(RAW_MATERIALS_PATH)
+        raw_materials_items = len(tbl_item)
+        raw_materials_path = RAW_MATERIALS_PATH if tbl_item else None
+    except Exception:
+        raw_materials_items = 0
+        raw_materials_path = None
+
     if ODA_SERVICE_URL:
         primary = "oda_service"
     elif LOCAL_ODA_PATH:
@@ -717,4 +761,7 @@ async def health():
         },
         "catalog_items": len(catalog),
         "catalog_path": CATALOG_PATH if catalog else None,
+        "raw_materials_items": raw_materials_items,
+        "raw_materials_path": raw_materials_path,
+        "level2_bom": raw_materials_items > 0,
     }
